@@ -20,8 +20,5 @@ define(function(){
         {"types":["all"], "modes":["consistent"], "view":OptionPopupView},
         {"types":["all"], "modes":["consistent"], "view":OptionAnimationSpeedView},
         {"types":["all"], "modes":["consistent"], "view":OptionRestoreGraph}
-        //{"type":"all", "elementId": "bgplayFullscreen", "view":FullScreenView},
-        //{"type":"all", "elementId": "bgplayScreenshot", "view":ScreenShotView},
-        //{"type":"all", "view":LivePermalinkView}
     ]
 });
