@@ -81,10 +81,10 @@ var Source=Backbone.Model.extend({
      * @return {String} A string representing this object
      */
     toString:function(){
-        var out="";
+        var out = "";
         switch (this.bgplay.get("type")){
             default:
-                out=this.get("id")||"";
+                out = this.get("id")||"";
                 break;
         }
         return out;

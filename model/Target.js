@@ -10,7 +10,7 @@
  * @class Target
  * @module model
  */
-var Target=Backbone.Model.extend({
+var Target = Backbone.Model.extend({
     defaults: function(){
         return{
             type:"target",
@@ -19,7 +19,9 @@ var Target=Backbone.Model.extend({
 
     },
     addNode:function(element){
-        this.attributes.nodes.push(element);
+        if (!arrayContains(this.attributes.nodes, element)){
+            this.attributes.nodes.push(element);
+        }
     },
 
     /**

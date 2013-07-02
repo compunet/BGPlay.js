@@ -6,9 +6,9 @@
  * See the file LICENSE.txt for copying permission.
  */
 
-var currentUrl=document.location.search;
+var currentUrl = document.location.search;
 var isMobile;
-var templateCache={};
+var templateCache = {};
 
 function getAmountOfTime(timestamp){
     var amount = {};
@@ -41,6 +41,45 @@ function arrayToString(string, symbol){
     }
 }
 
+function reverseArray(array){
+    var out, n, length;
+    out = [];
+    length = array.length;
+    for (n=length-1; n>=0; n--){
+        out.push(array[n]);
+    }
+    return out;
+}
+
+function toRadians (angle) {
+    return angle * (Math.PI / 180);
+}
+
+function lineIntersect(x1,y1,x2,y2, x3,y3,x4,y4) {
+    var x = ((x1*y2-y1*x2)*(x3-x4)-(x1-x2)*(x3*y4-y3*x4))/((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4));
+    var y = ((x1*y2-y1*x2)*(y3-y4)-(y1-y2)*(x3*y4-y3*x4))/((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4));
+    return {x:x, y:y};
+}
+
+function segmentIntersect(x1,y1,x2,y2, x3,y3,x4,y4) {
+    var x, y , attenuation = 0.1;
+
+    attenuation = 0.1;
+    x = ((x1*y2-y1*x2)*(x3-x4)-(x1-x2)*(x3*y4-y3*x4))/((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4));
+    y = ((x1*y2-y1*x2)*(y3-y4)-(y1-y2)*(x3*y4-y3*x4))/((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4));
+
+    if (isNaN(x)||isNaN(y)) {
+        return false;
+    }
+    if ((x>=(Math.min(x1, x2)-attenuation) && x<=(Math.max(x1,x2)+attenuation)) && (y>=(Math.min(y1, y2)-attenuation) && y<=(Math.max(y1,y2)+attenuation))
+        && (x>=(Math.min(x3, x4)-attenuation) && x<=(Math.max(x3,x4)+attenuation)) && (y>=(Math.min(y3, y4)-attenuation) && y<=(Math.max(y3,y4)+attenuation))){
+        return {x: x, y: y};
+    }
+
+    return false;
+}
+
+
 function getUrlParam(name) {
     var match = new RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
     return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
@@ -63,8 +102,8 @@ function needed(name,obj){
 }
 
 //This function uses Mustache.js to parse a template file and returns or directly injects the resulting DOM
-function parseTemplate(environment,template,object,where,method){
-    var templateFile=environment.fileRoot+'js/bgplay/templates/'+template;
+function parseTemplate(environment, template, object, where, method){
+    var templateFile = environment.templateRoot + template;
     if (where==null)
         alert("DOM is null: "+template);
 
@@ -115,6 +154,7 @@ function dateToUTC(timestamp){
     var date = new Date(timestamp*1000);
     return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),  date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds());
 }
+
 
 var isInternetExplorer=function(){
     var version, re, ua;
@@ -185,8 +225,8 @@ Backbone.View.prototype.destroyMe=function(){
     }
 
     try{
-        delete this.$el;
-        delete this.el;
+        //delete this.$el;
+        //delete this.el;
     }catch(e){
     }
 }
@@ -253,7 +293,7 @@ function removeArrayElement(mainArray, element){
 
 function printLoadingInformation(environment,log){
     var domElement;
-    domElement = environment.thisWidget.bgplayDom.find('.bgplayLoadingInformation');
+    domElement = environment.bgplayDom.find('.bgplayLoadingInformation');
 
     if (domElement.length!=0){
         domElement.remove();
@@ -262,7 +302,7 @@ function printLoadingInformation(environment,log){
     domElement = $('<div class="bgplayLoadingInformation">' +
         '<div class="loadingLog"></div>' +
         '</div>');
-    environment.thisWidget.bgplayDom.prepend(domElement);
+    environment.bgplayDom.prepend(domElement);
 
     if (log==""){
         domElement.hide();
@@ -270,4 +310,19 @@ function printLoadingInformation(environment,log){
         domElement.find('.loadingLog').html(log);
         domElement.show();
     }
+}
+
+var globalSVGIndex = new net.webrobotics.TreeMap(comparator, {allowDuplicateKeys:true, suppressDuplicateKeyAlerts:true});
+
+function setSVGIndex(element, index){
+    globalSVGIndex.removeValue(element);
+    globalSVGIndex.put(index, element);
+
+    globalSVGIndex.forEach(function(svgElement){
+        svgElement.toFront();
+    });
+}
+
+function loadCss(css_url) {
+    $("head").append($('<link rel="stylesheet" href="' + css_url + '" type="text/css"/>'));
 }

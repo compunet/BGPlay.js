@@ -13,11 +13,12 @@
  * @module model
  *
  */
-var Bgplay=Backbone.Model.extend({
+var Bgplay = Backbone.Model.extend({
     defaults:function(){
         return {
-            "sources":new Sources(),
-            "targets":new Targets(),
+            "sources": new Sources(),
+            "targets": new Targets(),
+            "clusters": new net.webrobotics.TreeMap(comparator,{allowDuplicateKeys:false,suppressDuplicateKeyAlerts:true}),
             "realPrefixes":[],
             "type":"bgp",//this is a default value, it must be set with an appropriate value
             "cur_instant":null,//This var is extremely important
@@ -79,6 +80,15 @@ var Bgplay=Backbone.Model.extend({
     },
 
     /**
+     * Adds a cluster to the model.
+     * @method addCluster
+     * @param {Object} An instance of Cluster
+     */
+    addCluster:function(cluster){
+        this.get("clusters").put(cluster.id, cluster);
+    },
+
+    /**
      * Adds a source to the model.
      * @method addSource
      * @param {Object} An instance of Source
@@ -104,6 +114,16 @@ var Bgplay=Backbone.Model.extend({
      */
     getNode:function(id){
         return this.get("nodes").get(id);
+    },
+
+    /**
+     * Returns a cluster given an ID
+     * @method getCluster
+     * @param {String} An ID of a cluster
+     * @return {Object} The cluster with that ID
+     */
+    getCluster: function(id){
+        return this.get("clusters").get(id);
     },
 
     /**

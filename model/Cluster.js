@@ -22,33 +22,35 @@ var Cluster = Backbone.Model.extend({
      * @param {Map} A map of parameters
      */
     initialize:function(){
-        this.attributes.nodes = new Array();
+        this.attributes.nodes = new net.webrobotics.TreeMap(comparator, {allowDuplicateKeys:false, suppressDuplicateKeyAlerts:true});
     },
 
     /**
      * Adds a node to this cluster.
-     * @method addSource
+     * @method addNode
      * @param {Object} An instance of Node
      */
-    addNode:function(node){
-        if (!this.contains(node)){
-            this.get("nodes").push(node);
-        }
+    addNode: function(node){
+        this.get("nodes").put(node.id, node);
     },
 
-    getNode:function(id){
-        var n, length, nodes;
-        nodes = this.get("nodes");
-        length = nodes.length;
-        for (n=0; n<length; n++){
-            if (nodes[n].id == id){
-                return nodes[n];
-            }
-        }
-        return null;
+    /**
+     * Returns a node given an ID
+     * @method getNode
+     * @param {String} An ID of a node
+     * @return {Object} The node with that ID
+     */
+    getNode: function(id){
+        return this.get("nodes").get(id);
     },
 
-    contains:function(node){
+    /**
+     * Checks if this cluster contains a given node.
+     * @method contains
+     * @param {Object} An instance of Node
+     * @return {Boolean} True if the cluster contains the given node.
+     */
+    contains: function(node){
         var n, length, nodes;
         nodes = this.get("nodes");
         length = nodes.length;
@@ -67,7 +69,7 @@ var Cluster = Backbone.Model.extend({
      * @param {Map} A map of parameters
      * @return {Array} An array of {String} errors
      */
-    validate:function(attrs){
+    validate: function(attrs){
         var err=new Array();
         if(attrs.id==null)
             err.push("An id is required!");
@@ -82,10 +84,10 @@ var Cluster = Backbone.Model.extend({
      * @return {String} A string representing this object
      */
     toString:function(){
-        return this.get("id");
+        return this.id;
     }
 });
 
-var Clusters=Backbone.Collection.extend({
+var Clusters = Backbone.Collection.extend({
     model:Node
 });

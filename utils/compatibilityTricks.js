@@ -1,4 +1,12 @@
-//Some utilities
+/*
+ * BGPlay.js
+ * Copyright (c) 2013 Massimo Candela, Giuseppe Di Battista, Claudio Squarcella, Roma Tre University and RIPE NCC
+ * http://www.bgplayjs.com
+ *
+ * See the file LICENSE.txt for copying permission.
+ */
+
+
 String.prototype.trimEnd = function (c) {
     if (c)
         return this.replace(new RegExp(c.escapeRegExp() + "*$"), '');

@@ -45,11 +45,13 @@
             
                 <li><a href="..&#x2F;classes/Bgplay.html">Bgplay</a></li>
             
+                <li><a href="..&#x2F;classes/Cluster.html">Cluster</a></li>
+            
+                <li><a href="..&#x2F;classes/ControllerQuerySimpleView.html">ControllerQuerySimpleView</a></li>
+            
                 <li><a href="..&#x2F;classes/ControllerView.html">ControllerView</a></li>
             
                 <li><a href="..&#x2F;classes/Event.html">Event</a></li>
-            
-                <li><a href="..&#x2F;classes/FullScreenView.html">FullScreenView</a></li>
             
                 <li><a href="..&#x2F;classes/GraphView.html">GraphView</a></li>
             
@@ -57,9 +59,13 @@
             
                 <li><a href="..&#x2F;classes/Instant.html">Instant</a></li>
             
+                <li><a href="..&#x2F;classes/JsonWrapGeneric.html">JsonWrapGeneric</a></li>
+            
                 <li><a href="..&#x2F;classes/JsonWrapRipestat.html">JsonWrapRipestat</a></li>
             
-                <li><a href="..&#x2F;classes/LivePermalinkView.html">LivePermalinkView</a></li>
+                <li><a href="..&#x2F;classes/JsonWrapTraceroutes.html">JsonWrapTraceroutes</a></li>
+            
+                <li><a href="..&#x2F;classes/LegendView.html">LegendView</a></li>
             
                 <li><a href="..&#x2F;classes/MainView.html">MainView</a></li>
             
@@ -69,11 +75,13 @@
             
                 <li><a href="..&#x2F;classes/NodeView.html">NodeView</a></li>
             
+                <li><a href="..&#x2F;classes/OptionAnimationSpeedView.html">OptionAnimationSpeedView</a></li>
+            
+                <li><a href="..&#x2F;classes/OptionPopupView.html">OptionPopupView</a></li>
+            
                 <li><a href="..&#x2F;classes/Path.html">Path</a></li>
             
                 <li><a href="..&#x2F;classes/PathView.html">PathView</a></li>
-            
-                <li><a href="..&#x2F;classes/ScreenShotView.html">ScreenShotView</a></li>
             
                 <li><a href="..&#x2F;classes/Source.html">Source</a></li>
             
@@ -129,10 +137,9 @@
 <div class="file">
     <pre class="code prettyprint linenums">
 &#x2F;*
- * BGPlay.js #9660
- * A web-based service for the visualization of the Internet routing
- *
- * Copyright (c) 2012 Roma Tre University and RIPE NCC
+ * BGPlay.js
+ * Copyright (c) 2013 Massimo Candela, Giuseppe Di Battista, Claudio Squarcella, Roma Tre University and RIPE NCC
+ * http:&#x2F;&#x2F;www.bgplayjs.com
  *
  * See the file LICENSE.txt for copying permission.
  *&#x2F;
@@ -203,17 +210,11 @@ var Node=Backbone.Model.extend({
      * @return {String} A string representing this object
      *&#x2F;
     toString:function(){
-        var out=&quot;&quot;;
-        switch (this.attributes.environment.bgplay.get(&quot;type&quot;)){
-            default:
-                out=this.get(&quot;id&quot;)||&quot;&quot;;
-                break;
-        }
-        return out;
+        return this.id;
     }
 });
 
-var Nodes=Backbone.Collection.extend({
+var Nodes = Backbone.Collection.extend({
     model:Node
 });
 

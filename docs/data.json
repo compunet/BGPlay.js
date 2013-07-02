@@ -1,6 +1,42 @@
 {
     "project": {},
     "files": {
+        "connectors\\JsonWrapGeneric.js": {
+            "name": "connectors\\JsonWrapGeneric.js",
+            "modules": {
+                "model": 1
+            },
+            "classes": {
+                "JsonWrapGeneric": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "connectors\\JsonWrapRipestat.js": {
+            "name": "connectors\\JsonWrapRipestat.js",
+            "modules": {},
+            "classes": {
+                "JsonWrapRipestat": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "connectors\\JsonWrapTraceroutes.js": {
+            "name": "connectors\\JsonWrapTraceroutes.js",
+            "modules": {},
+            "classes": {
+                "JsonWrapTraceroutes": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib\\Intersection.js": {
+            "name": "lib\\Intersection.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "lib\\jquery-ui-timepicker-addon.js": {
             "name": "lib\\jquery-ui-timepicker-addon.js",
             "modules": {},
@@ -17,11 +53,18 @@
         },
         "model\\Bgplay.js": {
             "name": "model\\Bgplay.js",
-            "modules": {
-                "model": 1
-            },
+            "modules": {},
             "classes": {
                 "Bgplay": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "model\\Cluster.js": {
+            "name": "model\\Cluster.js",
+            "modules": {},
+            "classes": {
+                "Cluster": 1
             },
             "fors": {},
             "namespaces": {}
@@ -40,15 +83,6 @@
             "modules": {},
             "classes": {
                 "Instant": 1
-            },
-            "fors": {},
-            "namespaces": {}
-        },
-        "model\\JsonWrapRipestat.js": {
-            "name": "model\\JsonWrapRipestat.js",
-            "modules": {},
-            "classes": {
-                "JsonWrapRipestat": 1
             },
             "fors": {},
             "namespaces": {}
@@ -89,15 +123,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "utils\\graph.js": {
-            "name": "utils\\graph.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
-        "view\\BgpDataChecksView.js": {
-            "name": "view\\BgpDataChecksView.js",
+        "modules\\bgplay\\BgpDataChecksView.js": {
+            "name": "modules\\bgplay\\BgpDataChecksView.js",
             "modules": {
                 "modules": 1
             },
@@ -107,26 +134,22 @@
             "fors": {},
             "namespaces": {}
         },
-        "view\\ControllerView.js": {
-            "name": "view\\ControllerView.js",
+        "modules\\bgplay\\ControllerQuerySimpleView.js": {
+            "name": "modules\\bgplay\\ControllerQuerySimpleView.js",
             "modules": {},
-            "classes": {
-                "ControllerView": 1
-            },
+            "classes": {},
             "fors": {},
             "namespaces": {}
         },
-        "view\\FullScreenView.js": {
-            "name": "view\\FullScreenView.js",
+        "modules\\bgplay\\ControllerView.js": {
+            "name": "modules\\bgplay\\ControllerView.js",
             "modules": {},
-            "classes": {
-                "FullScreenView": 1
-            },
+            "classes": {},
             "fors": {},
             "namespaces": {}
         },
-        "view\\GraphView.js": {
-            "name": "view\\GraphView.js",
+        "modules\\bgplay\\GraphView.js": {
+            "name": "modules\\bgplay\\GraphView.js",
             "modules": {},
             "classes": {
                 "GraphView": 1
@@ -134,8 +157,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "view\\InfoPanelView.js": {
-            "name": "view\\InfoPanelView.js",
+        "modules\\bgplay\\InfoPanelView.js": {
+            "name": "modules\\bgplay\\InfoPanelView.js",
             "modules": {},
             "classes": {
                 "InfoPanelView": 1
@@ -143,35 +166,24 @@
             "fors": {},
             "namespaces": {}
         },
-        "view\\LivePermalinkView.js": {
-            "name": "view\\LivePermalinkView.js",
+        "modules\\bgplay\\LegendView.js": {
+            "name": "modules\\bgplay\\LegendView.js",
             "modules": {},
             "classes": {
-                "LivePermalinkView": 1
+                "LegendView": 1
             },
             "fors": {},
             "namespaces": {}
         },
-        "view\\MainView.js": {
-            "name": "view\\MainView.js",
+        "modules\\bgplay\\NodePositionView.js": {
+            "name": "modules\\bgplay\\NodePositionView.js",
             "modules": {},
-            "classes": {
-                "MainView": 1
-            },
+            "classes": {},
             "fors": {},
             "namespaces": {}
         },
-        "view\\NodePositionView.js": {
-            "name": "view\\NodePositionView.js",
-            "modules": {},
-            "classes": {
-                "NodePositionView": 1
-            },
-            "fors": {},
-            "namespaces": {}
-        },
-        "view\\NodeView.js": {
-            "name": "view\\NodeView.js",
+        "modules\\bgplay\\NodeView.js": {
+            "name": "modules\\bgplay\\NodeView.js",
             "modules": {},
             "classes": {
                 "NodeView": 1
@@ -179,8 +191,31 @@
             "fors": {},
             "namespaces": {}
         },
-        "view\\PathView.js": {
-            "name": "view\\PathView.js",
+        "modules\\bgplay\\OptionAnimationSpeedView.js": {
+            "name": "modules\\bgplay\\OptionAnimationSpeedView.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules\\bgplay\\OptionPopupView.js": {
+            "name": "modules\\bgplay\\OptionPopupView.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules\\bgplay\\OptionRestoreGraph.js": {
+            "name": "modules\\bgplay\\OptionRestoreGraph.js",
+            "modules": {},
+            "classes": {
+                "OptionAnimationSpeedView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules\\bgplay\\PathView.js": {
+            "name": "modules\\bgplay\\PathView.js",
             "modules": {},
             "classes": {
                 "PathView": 1
@@ -188,17 +223,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "view\\ScreenShotView.js": {
-            "name": "view\\ScreenShotView.js",
-            "modules": {},
-            "classes": {
-                "ScreenShotView": 1
-            },
-            "fors": {},
-            "namespaces": {}
-        },
-        "view\\TimelineView.js": {
-            "name": "view\\TimelineView.js",
+        "modules\\bgplay\\TimelineView.js": {
+            "name": "modules\\bgplay\\TimelineView.js",
             "modules": {},
             "classes": {
                 "TimelineView": 1
@@ -206,15 +232,60 @@
             "fors": {},
             "namespaces": {}
         },
-        "widget\\js\\widget_api_class.js": {
-            "name": "widget\\js\\widget_api_class.js",
+        "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js": {
+            "name": "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js",
+            "modules": {},
+            "classes": {
+                "ControllerQuerySimpleView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules\\bgplay_ripestat\\ControllerViewRipestat.js": {
+            "name": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "modules": {},
+            "classes": {
+                "ControllerView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules\\bgplay_ripestat\\NodePositionViewRipestat.js": {
+            "name": "modules\\bgplay_ripestat\\NodePositionViewRipestat.js",
+            "modules": {},
+            "classes": {
+                "NodePositionView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules\\bgplay_ripestat\\OptionPopupViewRipestat.js": {
+            "name": "modules\\bgplay_ripestat\\OptionPopupViewRipestat.js",
+            "modules": {},
+            "classes": {
+                "OptionPopupView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "modules\\MainView.js": {
+            "name": "modules\\MainView.js",
+            "modules": {},
+            "classes": {
+                "MainView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "utils\\graph.js": {
+            "name": "utils\\graph.js",
             "modules": {},
             "classes": {},
             "fors": {},
             "namespaces": {}
         },
-        "widget\\widget_api_class.js": {
-            "name": "widget\\widget_api_class.js",
+        "widget\\bgplayjs-main-widget.js": {
+            "name": "widget\\bgplayjs-main-widget.js",
             "modules": {},
             "classes": {},
             "fors": {},
@@ -226,10 +297,13 @@
             "name": "model",
             "submodules": {},
             "classes": {
+                "JsonWrapGeneric": 1,
+                "JsonWrapRipestat": 1,
+                "JsonWrapTraceroutes": 1,
                 "Bgplay": 1,
+                "Cluster": 1,
                 "Event": 1,
                 "Instant": 1,
-                "JsonWrapRipestat": 1,
                 "Node": 1,
                 "Path": 1,
                 "Source": 1,
@@ -239,35 +313,77 @@
             "namespaces": {},
             "tag": "module",
             "file": "model\\Target.js",
-            "line": 10,
-            "description": "This is the Facade of the model layer.\nIt manages all the collections of objects of the model layer and all the parameters needed to describe the domain."
+            "line": 9,
+            "description": "This class is a wrapper of the inputs."
         },
         "modules": {
             "name": "modules",
             "submodules": {},
             "classes": {
                 "BgpDataChecksView": 1,
+                "ControllerQuerySimpleView": 1,
                 "ControllerView": 1,
-                "FullScreenView": 1,
                 "GraphView": 1,
                 "InfoPanelView": 1,
-                "LivePermalinkView": 1,
-                "MainView": 1,
+                "LegendView": 1,
                 "NodePositionView": 1,
                 "NodeView": 1,
+                "OptionAnimationSpeedView": 1,
+                "OptionPopupView": 1,
                 "PathView": 1,
-                "ScreenShotView": 1,
-                "TimelineView": 1
+                "TimelineView": 1,
+                "MainView": 1
             },
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "view\\TimelineView.js",
-            "line": 10,
+            "file": "modules\\MainView.js",
+            "line": 9,
             "description": "This is a module specific for BGP.\nThe objective of this module is to provide a set of auto-start function for checking BGP data."
         }
     },
     "classes": {
+        "JsonWrapGeneric": {
+            "name": "JsonWrapGeneric",
+            "shortname": "JsonWrapGeneric",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "model",
+            "file": "connectors\\JsonWrapGeneric.js",
+            "line": 9,
+            "description": "This class is a wrapper of the inputs."
+        },
+        "JsonWrapRipestat": {
+            "name": "JsonWrapRipestat",
+            "shortname": "JsonWrapRipestat",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "model",
+            "namespace": "",
+            "file": "connectors\\JsonWrapRipestat.js",
+            "line": 9,
+            "description": "This class is a wrapper of the inputs."
+        },
+        "JsonWrapTraceroutes": {
+            "name": "JsonWrapTraceroutes",
+            "shortname": "JsonWrapTraceroutes",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "model",
+            "namespace": "",
+            "file": "connectors\\JsonWrapTraceroutes.js",
+            "line": 10,
+            "description": "This class is a wrapper of the inputs."
+        },
         "Bgplay": {
             "name": "Bgplay",
             "shortname": "Bgplay",
@@ -277,9 +393,23 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "model",
+            "namespace": "",
             "file": "model\\Bgplay.js",
-            "line": 10,
+            "line": 9,
             "description": "This is the Facade of the model layer.\nIt manages all the collections of objects of the model layer and all the parameters needed to describe the domain."
+        },
+        "Cluster": {
+            "name": "Cluster",
+            "shortname": "Cluster",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "model",
+            "namespace": "",
+            "file": "model\\Cluster.js",
+            "line": 9
         },
         "Event": {
             "name": "Event",
@@ -292,7 +422,7 @@
             "module": "model",
             "namespace": "",
             "file": "model\\Event.js",
-            "line": 10
+            "line": 9
         },
         "Instant": {
             "name": "Instant",
@@ -305,22 +435,8 @@
             "module": "model",
             "namespace": "",
             "file": "model\\Instant.js",
-            "line": 10,
+            "line": 9,
             "description": "An instance of Instant is an abstraction of a point in time.\nIt is composed of an ID and a unix timestamp.\nThe timestamp is the first parameter considered during a sort of a set of instants.\nIn case of equal timestamps, the ID order is decisive."
-        },
-        "JsonWrapRipestat": {
-            "name": "JsonWrapRipestat",
-            "shortname": "JsonWrapRipestat",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "model",
-            "namespace": "",
-            "file": "model\\JsonWrapRipestat.js",
-            "line": 10,
-            "description": "This class is a wrapper of the inputs."
         },
         "Node": {
             "name": "Node",
@@ -333,7 +449,7 @@
             "module": "model",
             "namespace": "",
             "file": "model\\Node.js",
-            "line": 10
+            "line": 9
         },
         "Path": {
             "name": "Path",
@@ -346,7 +462,7 @@
             "module": "model",
             "namespace": "",
             "file": "model\\Path.js",
-            "line": 10,
+            "line": 9,
             "description": "A path is an ordered set of nodes."
         },
         "Source": {
@@ -360,7 +476,7 @@
             "module": "model",
             "namespace": "",
             "file": "model\\Source.js",
-            "line": 10
+            "line": 9
         },
         "Target": {
             "name": "Target",
@@ -373,7 +489,7 @@
             "module": "model",
             "namespace": "",
             "file": "model\\Target.js",
-            "line": 10
+            "line": 9
         },
         "BgpDataChecksView": {
             "name": "BgpDataChecksView",
@@ -385,9 +501,23 @@
             "extension_for": [],
             "module": "modules",
             "namespace": "",
-            "file": "view\\BgpDataChecksView.js",
-            "line": 10,
+            "file": "modules\\bgplay\\BgpDataChecksView.js",
+            "line": 9,
             "description": "This is a module specific for BGP.\nThe objective of this module is to provide a set of auto-start function for checking BGP data."
+        },
+        "ControllerQuerySimpleView": {
+            "name": "ControllerQuerySimpleView",
+            "shortname": "ControllerQuerySimpleView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "modules",
+            "namespace": "",
+            "file": "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js",
+            "line": 9,
+            "description": "This is a module specific for BGP.\nIt provides the query form.\nTemplate: controllerLight.html"
         },
         "ControllerView": {
             "name": "ControllerView",
@@ -399,23 +529,9 @@
             "extension_for": [],
             "module": "modules",
             "namespace": "",
-            "file": "view\\ControllerView.js",
-            "line": 10,
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 9,
             "description": "This is a module specific for BGP.\nIt provides the query form.\nTemplate: controller.html"
-        },
-        "FullScreenView": {
-            "name": "FullScreenView",
-            "shortname": "FullScreenView",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "modules",
-            "namespace": "",
-            "file": "view\\FullScreenView.js",
-            "line": 10,
-            "description": "FullScreenView provides a full-screen visualization"
         },
         "GraphView": {
             "name": "GraphView",
@@ -427,8 +543,8 @@
             "extension_for": [],
             "module": "modules",
             "namespace": "",
-            "file": "view\\GraphView.js",
-            "line": 10,
+            "file": "modules\\bgplay\\GraphView.js",
+            "line": 9,
             "description": "GraphView provides the SVG graph.\nTemplate: graph.html"
         },
         "InfoPanelView": {
@@ -441,13 +557,13 @@
             "extension_for": [],
             "module": "modules",
             "namespace": "",
-            "file": "view\\InfoPanelView.js",
-            "line": 10,
+            "file": "modules\\bgplay\\InfoPanelView.js",
+            "line": 9,
             "description": "InfoPanelView provides a panel in which the other modules can publish information.\nTemplate: infoPanel.html"
         },
-        "LivePermalinkView": {
-            "name": "LivePermalinkView",
-            "shortname": "LivePermalinkView",
+        "LegendView": {
+            "name": "LegendView",
+            "shortname": "LegendView",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -455,23 +571,9 @@
             "extension_for": [],
             "module": "modules",
             "namespace": "",
-            "file": "view\\LivePermalinkView.js",
-            "line": 10,
-            "description": "LivePermalinkView provides a dynamic permalink composed of parameters changed due to user interaction."
-        },
-        "MainView": {
-            "name": "MainView",
-            "shortname": "MainView",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "modules",
-            "namespace": "",
-            "file": "view\\MainView.js",
-            "line": 10,
-            "description": "MainView manages all the modules.\nAt initialization time it injects all the needed DOM elements.\nTemplate: main.html"
+            "file": "modules\\bgplay\\LegendView.js",
+            "line": 9,
+            "description": "LegendView provides a legend explaining colours used in the representation.\nTemplate: legend.html"
         },
         "NodePositionView": {
             "name": "NodePositionView",
@@ -483,8 +585,8 @@
             "extension_for": [],
             "module": "modules",
             "namespace": "",
-            "file": "view\\NodePositionView.js",
-            "line": 10,
+            "file": "modules\\bgplay_ripestat\\NodePositionViewRipestat.js",
+            "line": 9,
             "description": "NodePositionView provides three functionalities:\n- allows the user to obtain the json of the graph;\n- allows the user to edit and apply a json to the graph;\n- applies, if present, a json from widget's parameters."
         },
         "NodeView": {
@@ -497,8 +599,36 @@
             "extension_for": [],
             "module": "modules",
             "namespace": "",
-            "file": "view\\NodeView.js",
-            "line": 10
+            "file": "modules\\bgplay\\NodeView.js",
+            "line": 9
+        },
+        "OptionAnimationSpeedView": {
+            "name": "OptionAnimationSpeedView",
+            "shortname": "OptionAnimationSpeedView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "modules",
+            "namespace": "",
+            "file": "modules\\bgplay\\OptionRestoreGraph.js",
+            "line": 9,
+            "description": "OptionAnimationSpeedView pushes in the option panel the animation speed control"
+        },
+        "OptionPopupView": {
+            "name": "OptionPopupView",
+            "shortname": "OptionPopupView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "modules",
+            "namespace": "",
+            "file": "modules\\bgplay_ripestat\\OptionPopupViewRipestat.js",
+            "line": 9,
+            "description": "OptionPopupView draws a panel which allows the user to graphically manage options"
         },
         "PathView": {
             "name": "PathView",
@@ -510,22 +640,8 @@
             "extension_for": [],
             "module": "modules",
             "namespace": "",
-            "file": "view\\PathView.js",
-            "line": 10
-        },
-        "ScreenShotView": {
-            "name": "ScreenShotView",
-            "shortname": "ScreenShotView",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "modules",
-            "namespace": "",
-            "file": "view\\ScreenShotView.js",
-            "line": 10,
-            "description": "ScreenShotView opens in a new tab the SVG representation of the graph."
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 9
         },
         "TimelineView": {
             "name": "TimelineView",
@@ -537,12 +653,511 @@
             "extension_for": [],
             "module": "modules",
             "namespace": "",
-            "file": "view\\TimelineView.js",
-            "line": 10,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 9,
             "description": "Template: timeline.html"
+        },
+        "MainView": {
+            "name": "MainView",
+            "shortname": "MainView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "modules",
+            "namespace": "",
+            "file": "modules\\MainView.js",
+            "line": 9,
+            "description": "MainView manages all the modules.\nAt initialization time it injects all the needed DOM elements.\nTemplate: main.html"
         }
     },
     "classitems": [
+        {
+            "file": "connectors\\JsonWrapGeneric.js",
+            "line": 76,
+            "description": "This method converts input parameters.",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "Map of parameters valid outside the environment",
+                    "type": "Map"
+                }
+            ],
+            "return": {
+                "description": "A Map of parameters valid inside the environment",
+                "type": "Map"
+            },
+            "class": "JsonWrapGeneric",
+            "module": "model"
+        },
+        {
+            "file": "connectors\\JsonWrapGeneric.js",
+            "line": 113,
+            "description": "This method converts input parameters.",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "Map of parameters valid inside the environment",
+                    "type": "Map"
+                }
+            ],
+            "return": {
+                "description": "A Map of parameters valid outside the environment",
+                "type": "Map"
+            },
+            "class": "JsonWrapGeneric",
+            "module": "model"
+        },
+        {
+            "file": "connectors\\JsonWrapGeneric.js",
+            "line": 138,
+            "description": "This method returns the URL where the json file related to the provided parameters is placed.",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "string where the data-source is placed",
+                    "type": "String"
+                },
+                {
+                    "name": "A",
+                    "description": "Map of parameters valid inside the environment",
+                    "type": "Map"
+                }
+            ],
+            "return": {
+                "description": "An URL",
+                "type": "String"
+            },
+            "class": "JsonWrapGeneric",
+            "module": "model"
+        },
+        {
+            "file": "connectors\\JsonWrapGeneric.js",
+            "line": 156,
+            "description": "This method populates Bgplay instantiating all the object of the model layer.",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "json data object",
+                    "type": "Object"
+                }
+            ],
+            "class": "JsonWrapGeneric",
+            "module": "model"
+        },
+        {
+            "file": "connectors\\JsonWrapRipestat.js",
+            "line": 26,
+            "description": "This method converts input parameters.",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "Map of parameters valid outside the environment",
+                    "type": "Map"
+                }
+            ],
+            "return": {
+                "description": "A Map of parameters valid inside the environment",
+                "type": "Map"
+            },
+            "class": "JsonWrapRipestat",
+            "module": "model"
+        },
+        {
+            "file": "connectors\\JsonWrapRipestat.js",
+            "line": 55,
+            "description": "This method converts input parameters.",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "Map of parameters valid inside the environment",
+                    "type": "Map"
+                }
+            ],
+            "return": {
+                "description": "A Map of parameters valid outside the environment",
+                "type": "Map"
+            },
+            "class": "JsonWrapRipestat",
+            "module": "model"
+        },
+        {
+            "file": "connectors\\JsonWrapRipestat.js",
+            "line": 80,
+            "description": "This method returns the URL where the json file related to the provided parameters is placed.",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "string where the data-source is placed",
+                    "type": "String"
+                },
+                {
+                    "name": "A",
+                    "description": "Map of parameters valid inside the environment",
+                    "type": "Map"
+                }
+            ],
+            "return": {
+                "description": "An URL",
+                "type": "String"
+            },
+            "class": "JsonWrapRipestat",
+            "module": "model"
+        },
+        {
+            "file": "connectors\\JsonWrapRipestat.js",
+            "line": 93,
+            "description": "This method populates Bgplay instantiating all the object of the model layer.",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "json data object",
+                    "type": "Object"
+                }
+            ],
+            "class": "JsonWrapRipestat",
+            "module": "model"
+        },
+        {
+            "file": "connectors\\JsonWrapTraceroutes.js",
+            "line": 114,
+            "description": "This method converts input parameters.",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "Map of parameters valid outside the environment",
+                    "type": "Map"
+                }
+            ],
+            "return": {
+                "description": "A Map of parameters valid inside the environment",
+                "type": "Map"
+            },
+            "class": "JsonWrapTraceroutes",
+            "module": "model"
+        },
+        {
+            "file": "connectors\\JsonWrapTraceroutes.js",
+            "line": 154,
+            "description": "This method converts input parameters.",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "Map of parameters valid inside the environment",
+                    "type": "Map"
+                }
+            ],
+            "return": {
+                "description": "A Map of parameters valid outside the environment",
+                "type": "Map"
+            },
+            "class": "JsonWrapTraceroutes",
+            "module": "model"
+        },
+        {
+            "file": "connectors\\JsonWrapTraceroutes.js",
+            "line": 167,
+            "description": "This method returns the URL where the json file related to the provided parameters is placed.",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "string where the data-source is placed",
+                    "type": "String"
+                },
+                {
+                    "name": "A",
+                    "description": "Map of parameters valid inside the environment",
+                    "type": "Map"
+                }
+            ],
+            "return": {
+                "description": "An URL",
+                "type": "String"
+            },
+            "class": "JsonWrapTraceroutes",
+            "module": "model"
+        },
+        {
+            "file": "connectors\\JsonWrapTraceroutes.js",
+            "line": 201,
+            "description": "This method populates Bgplay instantiating all the object of the model layer.",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "json data object",
+                    "type": "Object"
+                }
+            ],
+            "class": "JsonWrapTraceroutes",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1,
+            "description": "Intersection.js\ncopyright 2002, Kevin Lindsey",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 9,
+            "description": "constructor",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 21,
+            "description": "init",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 32,
+            "description": "appendPoint",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 42,
+            "description": "appendPoints",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 52,
+            "description": "class methods",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 58,
+            "description": "intersectShapes",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 98,
+            "description": "intersectPathShape",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 108,
+            "description": "intersectBezier2Bezier2",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 211,
+            "description": "intersectBezier2Bezier3",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 335,
+            "description": "intersectBezier2Circle",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 345,
+            "description": "intersectBezier2Ellipse",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 389,
+            "description": "intersectBezier2Line",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 465,
+            "description": "intersectBezier2Polygon",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 488,
+            "description": "intersectBezier2Rectangle",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 517,
+            "description": "intersectBezier3Bezier3",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 826,
+            "description": "intersectBezier3Circle",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 836,
+            "description": "intersectBezier3Ellipse",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 896,
+            "description": "intersectBezier3Line\nMany thanks to Dan Sunday at SoftSurfer.com.  He gave me a very thorough\n   sketch of the algorithm used here.  Without his help, I'm not sure when I\n   would have figured out this intersection problem.",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1002,
+            "description": "intersectBezier3Polygon",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1025,
+            "description": "intersectBezier3Rectangle",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1054,
+            "description": "intersectCircleCircle",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1099,
+            "description": "intersectCircleEllipse",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1109,
+            "description": "intersectCircleLine",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1155,
+            "description": "intersectCirclePolygon",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1182,
+            "description": "intersectCircleRectangle",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1214,
+            "description": "intersectEllipseEllipse\n   \n   This code is based on MgcIntr2DElpElp.cpp written by David Eberly.  His\n   code along with many other excellent examples are avaiable at his site:\n   http://www.magic-software.com\nNOTE: Rotation will need to be added to this function",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1271,
+            "description": "intersectEllipseLine\n   \n   NOTE: Rotation will need to be added to this function",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1325,
+            "description": "intersectEllipsePolygon",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1349,
+            "description": "intersectEllipseRectangle",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1379,
+            "description": "intersectLineLine",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1418,
+            "description": "intersectLinePolygon",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1441,
+            "description": "intersectLineRectangle",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1471,
+            "description": "intersectPolygonPolygon",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1496,
+            "description": "intersectPolygonRectangle",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1526,
+            "description": "intersectRayRay",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1560,
+            "description": "intersectRectangleRectangle",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\Intersection.js",
+            "line": 1590,
+            "description": "bezout\nThis code is based on MgcIntr2DElpElp.cpp written by David Eberly.  His\n   code along with many other excellent examples are avaiable at his site:\n   http://www.magic-software.com",
+            "class": "Bgplay",
+            "module": "model"
+        },
         {
             "file": "lib\\jquery-ui-timepicker-addon.js",
             "line": 1781,
@@ -556,7 +1171,8 @@
             "return": {
                 "description": "string"
             },
-            "class": "Bgplay"
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\jquery-ui-timepicker-addon.js",
@@ -579,7 +1195,8 @@
             "return": {
                 "description": "jQuery"
             },
-            "class": "Bgplay"
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\jquery-ui-timepicker-addon.js",
@@ -606,7 +1223,8 @@
             "return": {
                 "description": "jQuery"
             },
-            "class": "Bgplay"
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\jquery-ui-timepicker-addon.js",
@@ -633,7 +1251,8 @@
             "return": {
                 "description": "jQuery"
             },
-            "class": "Bgplay"
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\jquery-ui-timepicker-addon.js",
@@ -660,73 +1279,92 @@
             "return": {
                 "description": "jQuery"
             },
-            "class": "Bgplay"
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\mustaches.js",
-            "line": 110,
+            "line": 81,
             "description": "Returns `true` if the tail is empty (end of string).",
-            "class": "Bgplay"
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\mustaches.js",
-            "line": 117,
+            "line": 88,
             "description": "Tries to match the given regular expression at the current position.\nReturns the matched text if it can match, the empty string otherwise.",
-            "class": "Bgplay"
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\mustaches.js",
-            "line": 133,
+            "line": 104,
             "description": "Skips all text until the given regular expression can be matched. Returns\nthe skipped string, which is the entire tail if no match can be made.",
-            "class": "Bgplay"
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\mustaches.js",
-            "line": 328,
-            "description": "Low-level function that compiles the given `tokens` into a\nfunction that accepts two arguments: a Context and a\nRenderer. Returns the body of the function as a string if\n`returnBody` is true.",
-            "class": "Bgplay"
+            "line": 232,
+            "description": "Low-level function that renders the given `tokens` using the given `writer`\nand `context`. The `template` string is only needed for templates that use\nhigher-order sections to extract the portion of the original template that\nwas contained in that section.",
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\mustaches.js",
-            "line": 389,
-            "description": "Forms the given linear array of `tokens` into a nested tree structure\nwhere tokens that represent a section have a \"tokens\" array property\nthat contains all tokens that are in that section.",
-            "class": "Bgplay"
+            "line": 300,
+            "description": "Forms the given array of `tokens` into a nested tree structure where\ntokens that represent a section have two additional items: 1) an array of\nall tokens that appear in that section and 2) the index in the original\ntemplate that represents the end of that section.",
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\mustaches.js",
-            "line": 443,
+            "line": 334,
             "description": "Combines the values of consecutive text tokens in the given `tokens` array\nto a single token.",
-            "class": "Bgplay"
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\mustaches.js",
-            "line": 462,
+            "line": 365,
             "description": "Breaks up the given `template` string into a tree of token objects. If\n`tags` is given here it must be an array with two string values: the\nopening and closing tags used in the template (e.g. [\"<%\", \"%>\"]). Of\ncourse, the default is to use mustaches (i.e. Mustache.tags).",
-            "class": "Bgplay"
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\mustaches.js",
-            "line": 569,
-            "description": "Clears all cached templates and partials.",
-            "class": "Bgplay"
+            "line": 483,
+            "description": "Clears all cached templates and partials in the default writer.",
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\mustaches.js",
-            "line": 576,
-            "description": "High-level API for compiling the given `tokens` down to a reusable\nfunction. If `tokens` is a string it will be parsed using the given `tags`\nbefore it is compiled.",
-            "class": "Bgplay"
+            "line": 490,
+            "description": "Compiles the given `template` to a reusable function using the default\nwriter.",
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\mustaches.js",
-            "line": 585,
-            "description": "High-level API for compiling the `tokens` for the partial with the given\n`name` down to a reusable function. If `tokens` is a string it will be\nparsed using the given `tags` before it is compiled.",
-            "class": "Bgplay"
+            "line": 498,
+            "description": "Compiles the partial with the given `name` and `template` to a reusable\nfunction using the default writer.",
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "lib\\mustaches.js",
-            "line": 594,
-            "description": "High-level API for rendering the `template` using the given `view`. The\noptional `partials` object may be given here for convenience, but note that\nit will cause all partials to be re-compiled, thus hurting performance. Of\ncourse, this only matters if you're going to render the same template more\nthan once. If so, it is best to call `compilePartial` before calling this\nfunction and to leave the `partials` argument blank.",
-            "class": "Bgplay"
+            "line": 506,
+            "description": "Compiles the given array of tokens (the output of a parse) to a reusable\nfunction using the default writer.",
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "lib\\mustaches.js",
+            "line": 514,
+            "description": "Renders the `template` with the given `view` and `partials` using the\ndefault writer.",
+            "class": "Bgplay",
+            "module": "model"
         },
         {
             "file": "model\\Bgplay.js",
@@ -777,6 +1415,22 @@
         {
             "file": "model\\Bgplay.js",
             "line": 82,
+            "description": "Adds a cluster to the model.",
+            "itemtype": "method",
+            "name": "addCluster",
+            "params": [
+                {
+                    "name": "An",
+                    "description": "instance of Cluster",
+                    "type": "Object"
+                }
+            ],
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "model\\Bgplay.js",
+            "line": 91,
             "description": "Adds a source to the model.",
             "itemtype": "method",
             "name": "addSource",
@@ -792,7 +1446,7 @@
         },
         {
             "file": "model\\Bgplay.js",
-            "line": 91,
+            "line": 100,
             "description": "Adds a target to the model.",
             "itemtype": "method",
             "name": "addTarget",
@@ -808,7 +1462,7 @@
         },
         {
             "file": "model\\Bgplay.js",
-            "line": 100,
+            "line": 109,
             "description": "Returns a node given an ID",
             "itemtype": "method",
             "name": "getNode",
@@ -828,7 +1482,27 @@
         },
         {
             "file": "model\\Bgplay.js",
-            "line": 110,
+            "line": 119,
+            "description": "Returns a cluster given an ID",
+            "itemtype": "method",
+            "name": "getCluster",
+            "params": [
+                {
+                    "name": "An",
+                    "description": "ID of a cluster",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The cluster with that ID",
+                "type": "Object"
+            },
+            "class": "Bgplay",
+            "module": "model"
+        },
+        {
+            "file": "model\\Bgplay.js",
+            "line": 129,
             "description": "Returns a source given an ID",
             "itemtype": "method",
             "name": "getSource",
@@ -848,7 +1522,7 @@
         },
         {
             "file": "model\\Bgplay.js",
-            "line": 120,
+            "line": 139,
             "description": "Returns a target given an ID",
             "itemtype": "method",
             "name": "getTarget",
@@ -868,7 +1542,7 @@
         },
         {
             "file": "model\\Bgplay.js",
-            "line": 141,
+            "line": 160,
             "description": "The validation method of Bgplay.\nThis method is used to check the initialization parameters.",
             "itemtype": "method",
             "name": "validate",
@@ -887,8 +1561,113 @@
             "module": "model"
         },
         {
+            "file": "model\\Cluster.js",
+            "line": 19,
+            "description": "The initialization method of this object.",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "map of parameters",
+                    "type": "Map"
+                }
+            ],
+            "class": "Cluster",
+            "module": "model"
+        },
+        {
+            "file": "model\\Cluster.js",
+            "line": 28,
+            "description": "Adds a node to this cluster.",
+            "itemtype": "method",
+            "name": "addNode",
+            "params": [
+                {
+                    "name": "An",
+                    "description": "instance of Node",
+                    "type": "Object"
+                }
+            ],
+            "class": "Cluster",
+            "module": "model"
+        },
+        {
+            "file": "model\\Cluster.js",
+            "line": 37,
+            "description": "Returns a node given an ID",
+            "itemtype": "method",
+            "name": "getNode",
+            "params": [
+                {
+                    "name": "An",
+                    "description": "ID of a node",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The node with that ID",
+                "type": "Object"
+            },
+            "class": "Cluster",
+            "module": "model"
+        },
+        {
+            "file": "model\\Cluster.js",
+            "line": 47,
+            "description": "Checks if this cluster contains a given node.",
+            "itemtype": "method",
+            "name": "contains",
+            "params": [
+                {
+                    "name": "An",
+                    "description": "instance of Node",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "True if the cluster contains the given node.",
+                "type": "Boolean"
+            },
+            "class": "Cluster",
+            "module": "model"
+        },
+        {
+            "file": "model\\Cluster.js",
+            "line": 65,
+            "description": "The validation method of this object.\nThis method is used to check the initialization parameters.",
+            "itemtype": "method",
+            "name": "validate",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "map of parameters",
+                    "type": "Map"
+                }
+            ],
+            "return": {
+                "description": "An array of {String} errors",
+                "type": "Array"
+            },
+            "class": "Cluster",
+            "module": "model"
+        },
+        {
+            "file": "model\\Cluster.js",
+            "line": 81,
+            "description": "Returns a string representing this object.",
+            "itemtype": "method",
+            "name": "toString",
+            "return": {
+                "description": "A string representing this object",
+                "type": "String"
+            },
+            "class": "Cluster",
+            "module": "model"
+        },
+        {
             "file": "model\\Event.js",
-            "line": 15,
+            "line": 14,
             "description": "The validation method of this object.\nThis method is used to check the initialization parameters.",
             "itemtype": "method",
             "name": "validate",
@@ -908,7 +1687,7 @@
         },
         {
             "file": "model\\Instant.js",
-            "line": 23,
+            "line": 22,
             "description": "Returns the timestamp of this instant.",
             "itemtype": "method",
             "name": "getTimestamp",
@@ -921,7 +1700,7 @@
         },
         {
             "file": "model\\Instant.js",
-            "line": 32,
+            "line": 31,
             "description": "The validation method of this object.\nThis method is used to check the initialization parameters.",
             "itemtype": "method",
             "name": "validate",
@@ -941,7 +1720,7 @@
         },
         {
             "file": "model\\Instant.js",
-            "line": 50,
+            "line": 49,
             "description": "Returns a human-readable string representing the timestamp of this instant.",
             "itemtype": "method",
             "name": "getDate",
@@ -954,7 +1733,7 @@
         },
         {
             "file": "model\\Instant.js",
-            "line": 59,
+            "line": 58,
             "description": "Returns a string representing this object.",
             "itemtype": "method",
             "name": "toString",
@@ -966,81 +1745,8 @@
             "module": "model"
         },
         {
-            "file": "model\\JsonWrapRipestat.js",
-            "line": 18,
-            "description": "This method converts input parameters.",
-            "params": [
-                {
-                    "name": "A",
-                    "description": "Map of parameters valid outside the environment",
-                    "type": "Map"
-                }
-            ],
-            "return": {
-                "description": "A Map of parameters valid inside the environment",
-                "type": "Map"
-            },
-            "class": "JsonWrapRipestat",
-            "module": "model"
-        },
-        {
-            "file": "model\\JsonWrapRipestat.js",
-            "line": 43,
-            "description": "This method converts input parameters.",
-            "params": [
-                {
-                    "name": "A",
-                    "description": "Map of parameters valid inside the environment",
-                    "type": "Map"
-                }
-            ],
-            "return": {
-                "description": "A Map of parameters valid outside the environment",
-                "type": "Map"
-            },
-            "class": "JsonWrapRipestat",
-            "module": "model"
-        },
-        {
-            "file": "model\\JsonWrapRipestat.js",
-            "line": 65,
-            "description": "This method returns the URL where the json file related to the provided parameters is placed.",
-            "params": [
-                {
-                    "name": "A",
-                    "description": "string where the data-source is placed",
-                    "type": "String"
-                },
-                {
-                    "name": "A",
-                    "description": "Map of parameters valid inside the environment",
-                    "type": "Map"
-                }
-            ],
-            "return": {
-                "description": "An URL",
-                "type": "String"
-            },
-            "class": "JsonWrapRipestat",
-            "module": "model"
-        },
-        {
-            "file": "model\\JsonWrapRipestat.js",
-            "line": 78,
-            "description": "This method populates Bgplay instantiating all the object of the model layer.",
-            "params": [
-                {
-                    "name": "A",
-                    "description": "json data object",
-                    "type": "Object"
-                }
-            ],
-            "class": "JsonWrapRipestat",
-            "module": "model"
-        },
-        {
             "file": "model\\Node.js",
-            "line": 20,
+            "line": 19,
             "description": "The initialization method of this object.",
             "itemtype": "method",
             "name": "initialize",
@@ -1056,7 +1762,7 @@
         },
         {
             "file": "model\\Node.js",
-            "line": 30,
+            "line": 29,
             "description": "Adds a source to this node.",
             "itemtype": "method",
             "name": "addSource",
@@ -1072,7 +1778,7 @@
         },
         {
             "file": "model\\Node.js",
-            "line": 42,
+            "line": 41,
             "description": "Adds a target to this node.",
             "itemtype": "method",
             "name": "addTarget",
@@ -1088,7 +1794,7 @@
         },
         {
             "file": "model\\Node.js",
-            "line": 54,
+            "line": 53,
             "description": "The validation method of this object.\nThis method is used to check the initialization parameters.",
             "itemtype": "method",
             "name": "validate",
@@ -1108,7 +1814,7 @@
         },
         {
             "file": "model\\Node.js",
-            "line": 70,
+            "line": 69,
             "description": "Returns a string representing this object.",
             "itemtype": "method",
             "name": "toString",
@@ -1121,7 +1827,7 @@
         },
         {
             "file": "model\\Path.js",
-            "line": 17,
+            "line": 16,
             "description": "The initialization method of this object.",
             "itemtype": "method",
             "name": "initialize",
@@ -1137,7 +1843,7 @@
         },
         {
             "file": "model\\Path.js",
-            "line": 27,
+            "line": 26,
             "description": "Adds a node to this path.",
             "itemtype": "method",
             "name": "addNode",
@@ -1153,7 +1859,7 @@
         },
         {
             "file": "model\\Path.js",
-            "line": 36,
+            "line": 35,
             "description": "Checks if this path contains a given node.",
             "itemtype": "method",
             "name": "contains",
@@ -1173,7 +1879,7 @@
         },
         {
             "file": "model\\Path.js",
-            "line": 56,
+            "line": 55,
             "description": "The validation method of this object.\nThis method is used to check the initialization parameters.",
             "itemtype": "method",
             "name": "validate",
@@ -1193,7 +1899,7 @@
         },
         {
             "file": "model\\Path.js",
-            "line": 70,
+            "line": 69,
             "description": "Returns a string representing this object.",
             "itemtype": "method",
             "name": "toString",
@@ -1206,7 +1912,7 @@
         },
         {
             "file": "model\\Source.js",
-            "line": 19,
+            "line": 18,
             "description": "The initialization method of this object.",
             "itemtype": "method",
             "name": "initialize",
@@ -1222,7 +1928,7 @@
         },
         {
             "file": "model\\Source.js",
-            "line": 34,
+            "line": 33,
             "description": "The validation method of this object.\nThis method is used to check the initialization parameters.",
             "itemtype": "method",
             "name": "validate",
@@ -1242,7 +1948,7 @@
         },
         {
             "file": "model\\Source.js",
-            "line": 50,
+            "line": 49,
             "description": "This method updates the state of this source, it is triggered at each change of the current instant defined by Bgplay.\nThe objective of this method is to find the current event in which the source is involved.\nIf the current event changes then this method triggers a \"curEventChange\" event (pub/sub) containing the current event.\nIf the current event is null then this method triggers a \"curEventNull\" event (pub/sub) containing the previous event.",
             "itemtype": "method",
             "name": "updateState",
@@ -1251,7 +1957,7 @@
         },
         {
             "file": "model\\Source.js",
-            "line": 79,
+            "line": 78,
             "description": "Returns a string representing this object.",
             "itemtype": "method",
             "name": "toString",
@@ -1264,7 +1970,7 @@
         },
         {
             "file": "model\\Source.js",
-            "line": 94,
+            "line": 93,
             "description": "Adds an event involving this source.",
             "itemtype": "method",
             "name": "addEvent",
@@ -1280,7 +1986,7 @@
         },
         {
             "file": "model\\Target.js",
-            "line": 26,
+            "line": 27,
             "description": "The validation method of this object.\nThis method is used to check the initialization parameters.",
             "itemtype": "method",
             "name": "validate",
@@ -1300,7 +2006,7 @@
         },
         {
             "file": "model\\Target.js",
-            "line": 42,
+            "line": 43,
             "description": "Returns a string representing this object.",
             "itemtype": "method",
             "name": "toString",
@@ -1312,33 +2018,8 @@
             "module": "model"
         },
         {
-            "file": "utils\\graph.js",
-            "line": 14,
-            "description": "Returns the distance between two points.",
-            "itemtype": "method",
-            "name": "pointDistance",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "and y of the first point",
-                    "type": "Number,Number"
-                },
-                {
-                    "name": "x",
-                    "description": "and y of the second point",
-                    "type": "Number,Number"
-                }
-            ],
-            "return": {
-                "description": "the distance between the two points",
-                "type": "Number"
-            },
-            "class": "BgpDataChecksView",
-            "module": "model"
-        },
-        {
-            "file": "view\\BgpDataChecksView.js",
-            "line": 18,
+            "file": "modules\\bgplay\\BgpDataChecksView.js",
+            "line": 17,
             "description": "The initialization method of this object.",
             "itemtype": "method",
             "name": "initialize",
@@ -1353,8 +2034,121 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 35,
+            "file": "modules\\bgplay\\ControllerQuerySimpleView.js",
+            "line": 29,
+            "description": "The initialization method of this object.",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "map of parameters",
+                    "type": "Map"
+                }
+            ],
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\ControllerQuerySimpleView.js",
+            "line": 91,
+            "description": "This method draws this module (eg. inject the DOM and elements).",
+            "itemtype": "method",
+            "name": "render",
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\ControllerQuerySimpleView.js",
+            "line": 139,
+            "description": "This method updates the DOM of the Control Panel without render it again.",
+            "itemtype": "method",
+            "name": "update",
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\ControllerQuerySimpleView.js",
+            "line": 166,
+            "description": "If this method is invoked during an animation then the animation pauses otherwise the animation starts.",
+            "itemtype": "method",
+            "name": "toggle",
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\ControllerQuerySimpleView.js",
+            "line": 183,
+            "description": "This method validates an IP/prefix inserted in the query form.",
+            "itemtype": "method",
+            "name": "validateIp",
+            "return": {
+                "description": "True if the given IP is valid",
+                "type": "Boolean"
+            },
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\ControllerQuerySimpleView.js",
+            "line": 202,
+            "description": "This method validates the query form.",
+            "itemtype": "method",
+            "name": "validateAll",
+            "return": {
+                "description": "True if the data inserted in the query form is valid",
+                "type": "Boolean"
+            },
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\ControllerQuerySimpleView.js",
+            "line": 215,
+            "description": "This method validates the time interval.",
+            "itemtype": "method",
+            "name": "validateInterval",
+            "return": {
+                "description": "True if the time interval is valid",
+                "type": "Boolean"
+            },
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\ControllerQuerySimpleView.js",
+            "line": 228,
+            "description": "This method validates a set of route collectors",
+            "itemtype": "method",
+            "name": "validateRrcs",
+            "return": {
+                "description": "True if the set of RRCs is valid",
+                "type": "Boolean"
+            },
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\ControllerQuerySimpleView.js",
+            "line": 306,
+            "description": "This method discards the new query parameters",
+            "itemtype": "method",
+            "name": "discardConfig",
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\ControllerQuerySimpleView.js",
+            "line": 315,
+            "description": "This method applies the new query parameters",
+            "itemtype": "method",
+            "name": "updateConfig",
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 36,
             "description": "The initialization method of this object.",
             "itemtype": "method",
             "name": "initialize",
@@ -1369,8 +2163,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 137,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 170,
             "description": "This method draws this module (eg. inject the DOM and elements).",
             "itemtype": "method",
             "name": "render",
@@ -1378,8 +2172,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 177,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 212,
             "description": "This method updates the DOM of the Control Panel without render it again.",
             "itemtype": "method",
             "name": "update",
@@ -1387,8 +2181,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 204,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 243,
             "description": "If this method is invoked during an animation then the animation pauses otherwise the animation starts.",
             "itemtype": "method",
             "name": "toggle",
@@ -1396,8 +2190,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 221,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 260,
             "description": "This method reloads the animation.",
             "itemtype": "method",
             "name": "reload",
@@ -1405,8 +2199,17 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 230,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 269,
+            "description": "This method repeats the last one event.",
+            "itemtype": "method",
+            "name": "repeat",
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 283,
             "description": "This method stops and reloads the animation.",
             "itemtype": "method",
             "name": "stopButton",
@@ -1414,8 +2217,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 239,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 292,
             "description": "This method stops the animation.",
             "itemtype": "method",
             "name": "stop",
@@ -1423,8 +2226,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 249,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 302,
             "description": "This method applies the previous event.",
             "itemtype": "method",
             "name": "previousEvent",
@@ -1432,8 +2235,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 265,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 320,
             "description": "This method applies the next event.",
             "itemtype": "method",
             "name": "nextEvent",
@@ -1441,8 +2244,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 281,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 336,
             "description": "This method validates an IP/prefix inserted in the query form.",
             "itemtype": "method",
             "name": "validateIp",
@@ -1454,8 +2257,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 300,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 355,
             "description": "This method validates the query form.",
             "itemtype": "method",
             "name": "validateAll",
@@ -1467,8 +2270,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 313,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 368,
             "description": "This method validates the time interval.",
             "itemtype": "method",
             "name": "validateInterval",
@@ -1480,8 +2283,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 326,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 381,
             "description": "This method validates a set of route collectors",
             "itemtype": "method",
             "name": "validateRrcs",
@@ -1493,8 +2296,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 401,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 459,
             "description": "This method discards the new query parameters",
             "itemtype": "method",
             "name": "discardConfig",
@@ -1502,8 +2305,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ControllerView.js",
-            "line": 410,
+            "file": "modules\\bgplay\\ControllerView.js",
+            "line": 468,
             "description": "This method applies the new query parameters",
             "itemtype": "method",
             "name": "updateConfig",
@@ -1511,33 +2314,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\FullScreenView.js",
-            "line": 20,
-            "description": "The initialization method of this object.",
-            "itemtype": "method",
-            "name": "initialize",
-            "params": [
-                {
-                    "name": "A",
-                    "description": "map of parameters",
-                    "type": "Map"
-                }
-            ],
-            "class": "FullScreenView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\FullScreenView.js",
-            "line": 40,
-            "description": "This method opens the full-screen view",
-            "itemtype": "method",
-            "name": "fullscreen",
-            "class": "FullScreenView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\GraphView.js",
-            "line": 23,
+            "file": "modules\\bgplay\\GraphView.js",
+            "line": 22,
             "description": "The initialization method of this object.",
             "itemtype": "method",
             "name": "initialize",
@@ -1552,8 +2330,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\GraphView.js",
-            "line": 131,
+            "file": "modules\\bgplay\\GraphView.js",
+            "line": 182,
             "description": "This method draws this module (eg. inject the DOM and elements).",
             "itemtype": "method",
             "name": "render",
@@ -1561,8 +2339,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\GraphView.js",
-            "line": 142,
+            "file": "modules\\bgplay\\GraphView.js",
+            "line": 193,
             "description": "This method activates touch gestures on the graph preventing the propagation of them on the whole page.",
             "itemtype": "method",
             "name": "activateTouch",
@@ -1570,8 +2348,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\GraphView.js",
-            "line": 156,
+            "file": "modules\\bgplay\\GraphView.js",
+            "line": 207,
             "description": "This method is called during an animation.\nUse this method if you want to make some changes to the entire graph.\nDo not use this method to make changes to a particular vertex or edge,\nuse instead dedicated event-triggered methods in the relative views.",
             "itemtype": "method",
             "name": "update",
@@ -1579,8 +2357,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\GraphView.js",
-            "line": 167,
+            "file": "modules\\bgplay\\GraphView.js",
+            "line": 218,
             "description": "This method will be called at the end of all the concurrent animation on the graph.\nUse this method if you want to make some changes to the entire graph.\nDo not use this method to make changes to a particular vertex or edge,\nuse instead dedicated event-triggered method in the relative views.",
             "itemtype": "method",
             "name": "allConcurrentAnimationsCompleted",
@@ -1588,8 +2366,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\GraphView.js",
-            "line": 182,
+            "file": "modules\\bgplay\\GraphView.js",
+            "line": 233,
             "description": "This method initializes all the NodeView needed to represent the nodes of the model layer.",
             "itemtype": "method",
             "name": "createAllNodes",
@@ -1597,8 +2375,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\GraphView.js",
-            "line": 193,
+            "file": "modules\\bgplay\\GraphView.js",
+            "line": 244,
             "description": "This method initializes a PathView object for each source-target pair of the model layer.\nHence a PathView represents the transition between a set of path objects of the model layer involving the same source-target pair.\nPathView uses events to update itself.",
             "itemtype": "method",
             "name": "createAllPaths",
@@ -1606,8 +2384,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\GraphView.js",
-            "line": 254,
+            "file": "modules\\bgplay\\GraphView.js",
+            "line": 305,
             "description": "This method checks if there is a cycle between two paths in order to understand if they can be collapsed together.",
             "itemtype": "method",
             "name": "thereIsCycle",
@@ -1631,8 +2409,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\GraphView.js",
-            "line": 340,
+            "file": "modules\\bgplay\\GraphView.js",
+            "line": 391,
             "description": "This method returns a unique color for a given PathView.\nThe objective of this method is to provide unambiguous colours for the paths of the graph.\nAs a first approach, the returned colours are taken from an array declared in config.js.\nThe default array is generated using the CMC(l:c) colour algorithm.\nAs a second approach, when the array of colours ends, a random generation is used.\nThis second approach does not guarantee that the generated colours are distinguishable.\nTherefore, tune the array of colours to prevent as much as possible the second approach.",
             "itemtype": "method",
             "name": "getPathColor",
@@ -1651,8 +2429,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\GraphView.js",
-            "line": 401,
+            "file": "modules\\bgplay\\GraphView.js",
+            "line": 452,
             "description": "The objective of this method is to identify a set of trees composed of static paths that can be collapsed\ntogether and coloured with the same colour without introducing ambiguity.\nAn ambiguity is generated when there is a cycle between two paths.",
             "itemtype": "method",
             "name": "computeSubTrees",
@@ -1660,8 +2438,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\InfoPanelView.js",
-            "line": 18,
+            "file": "modules\\bgplay\\InfoPanelView.js",
+            "line": 23,
             "description": "The initialization method of this object.",
             "itemtype": "method",
             "name": "initialize",
@@ -1676,8 +2454,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\InfoPanelView.js",
-            "line": 65,
+            "file": "modules\\bgplay\\InfoPanelView.js",
+            "line": 90,
             "description": "This method draws this module (eg. inject the DOM and elements).",
             "itemtype": "method",
             "name": "render",
@@ -1685,7 +2463,7 @@
             "module": "modules"
         },
         {
-            "file": "view\\LivePermalinkView.js",
+            "file": "modules\\bgplay\\LegendView.js",
             "line": 17,
             "description": "The initialization method of this object.",
             "itemtype": "method",
@@ -1697,56 +2475,20 @@
                     "type": "Map"
                 }
             ],
-            "class": "LivePermalinkView",
+            "class": "LegendView",
             "module": "modules"
         },
         {
-            "file": "view\\LivePermalinkView.js",
-            "line": 45,
+            "file": "modules\\bgplay\\LegendView.js",
+            "line": 55,
             "description": "This method draws this module (eg. inject the DOM and elements).",
             "itemtype": "method",
             "name": "render",
-            "class": "LivePermalinkView",
+            "class": "LegendView",
             "module": "modules"
         },
         {
-            "file": "view\\LivePermalinkView.js",
-            "line": 59,
-            "description": "This method manages the events of the built DOM.",
-            "itemtype": "method",
-            "name": "eventManager",
-            "class": "LivePermalinkView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\LivePermalinkView.js",
-            "line": 71,
-            "description": "This method dispatches the computation of permalinks.",
-            "itemtype": "method",
-            "name": "eventManager",
-            "class": "LivePermalinkView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\LivePermalinkView.js",
-            "line": 88,
-            "description": "This method computes dynamic permalinks.",
-            "itemtype": "method",
-            "name": "generateDynamicPermalink",
-            "class": "LivePermalinkView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\LivePermalinkView.js",
-            "line": 102,
-            "description": "This method computes static permalinks.",
-            "itemtype": "method",
-            "name": "generateStaticPermalink",
-            "class": "LivePermalinkView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\MainView.js",
+            "file": "modules\\bgplay\\NodePositionView.js",
             "line": 19,
             "description": "The initialization method of this object.",
             "itemtype": "method",
@@ -1758,64 +2500,12 @@
                     "type": "Map"
                 }
             ],
-            "class": "MainView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\MainView.js",
-            "line": 55,
-            "description": "This method draws this module (eg. inject the DOM and elements).",
-            "itemtype": "method",
-            "name": "render",
-            "class": "MainView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\MainView.js",
-            "line": 65,
-            "description": "This method alters the layout at run-time. It should be used only when absolutely necessary preferring instead a static CSS+HTML+Mustaches.js layout.",
-            "itemtype": "method",
-            "name": "layoutManager",
-            "class": "MainView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\MainView.js",
-            "line": 84,
-            "description": "This method initializes all the modules declared in the modules.js file.\nIn this environment a module is a View-Controller object:\n- each module is responsible for its representation;\n- each module is combined with a DOM element of the MainView's template;\n- each DOM element has an ID with prefix 'bgplay' to avoid ambiguities with the background html.",
-            "itemtype": "method",
-            "name": "loadViews",
-            "class": "MainView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\MainView.js",
-            "line": 109,
-            "description": "This method executes a set of functions when all the modules have been loaded.",
-            "itemtype": "method",
-            "name": "allModulesLoaded",
-            "class": "MainView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\NodePositionView.js",
-            "line": 20,
-            "description": "The initialization method of this object.",
-            "itemtype": "method",
-            "name": "initialize",
-            "params": [
-                {
-                    "name": "A",
-                    "description": "map of parameters",
-                    "type": "Map"
-                }
-            ],
             "class": "NodePositionView",
             "module": "modules"
         },
         {
-            "file": "view\\NodePositionView.js",
-            "line": 57,
+            "file": "modules\\bgplay\\NodePositionView.js",
+            "line": 56,
             "description": "This method draws this module (eg. inject the DOM and elements).",
             "itemtype": "method",
             "name": "render",
@@ -1823,8 +2513,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\NodePositionView.js",
-            "line": 76,
+            "file": "modules\\bgplay\\NodePositionView.js",
+            "line": 81,
             "description": "This method manages the events of the built DOM.",
             "itemtype": "method",
             "name": "eventManager",
@@ -1832,8 +2522,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\NodePositionView.js",
-            "line": 97,
+            "file": "modules\\bgplay\\NodePositionView.js",
+            "line": 106,
             "description": "This methods builds a string describing the graph.",
             "itemtype": "method",
             "name": "getNodesPositions",
@@ -1841,8 +2531,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\NodePositionView.js",
-            "line": 111,
+            "file": "modules\\bgplay\\NodePositionView.js",
+            "line": 120,
             "description": "This methods applies to each node the coordinates obtained with the getNodesPositions method.",
             "itemtype": "method",
             "name": "apply",
@@ -1850,8 +2540,17 @@
             "module": "modules"
         },
         {
-            "file": "view\\NodeView.js",
-            "line": 16,
+            "file": "modules\\bgplay\\NodePositionView.js",
+            "line": 143,
+            "description": "This method opens in a new tab an SVG file containing the graph",
+            "itemtype": "method",
+            "name": "screenshot",
+            "class": "NodePositionView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\NodeView.js",
+            "line": 15,
             "description": "The initialization method of this object.",
             "itemtype": "method",
             "name": "initialize",
@@ -1866,8 +2565,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\NodeView.js",
-            "line": 55,
+            "file": "modules\\bgplay\\NodeView.js",
+            "line": 76,
             "description": "This method is used to update the position of the SVG representation of the node.\nThe new position will be (this.x,this.y) of this NodeView.",
             "itemtype": "method",
             "name": "updatePosition",
@@ -1875,8 +2574,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\NodeView.js",
-            "line": 67,
+            "file": "modules\\bgplay\\NodeView.js",
+            "line": 88,
             "description": "This method is used to translate the position of the SVG representation of the node.\nThe current position will be translated of (x,y) passed as parameters.",
             "itemtype": "method",
             "name": "translate",
@@ -1896,8 +2595,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\NodeView.js",
-            "line": 84,
+            "file": "modules\\bgplay\\NodeView.js",
+            "line": 105,
             "description": "This method draws this module (eg. inject the DOM and elements).",
             "itemtype": "method",
             "name": "render",
@@ -1905,8 +2604,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\NodeView.js",
-            "line": 135,
+            "file": "modules\\bgplay\\NodeView.js",
+            "line": 184,
             "description": "This method manages the events for the SVG representation.",
             "itemtype": "method",
             "name": "loadSvgEvents",
@@ -1914,8 +2613,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\NodeView.js",
-            "line": 220,
+            "file": "modules\\bgplay\\NodeView.js",
+            "line": 308,
             "description": "This method returns the background colour of the node.",
             "itemtype": "method",
             "name": "getFillColor",
@@ -1927,8 +2626,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\NodeView.js",
-            "line": 241,
+            "file": "modules\\bgplay\\NodeView.js",
+            "line": 329,
             "description": "This method returns the border colour of the node.",
             "itemtype": "method",
             "name": "getStrokeColor",
@@ -1940,8 +2639,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\NodeView.js",
-            "line": 262,
+            "file": "modules\\bgplay\\NodeView.js",
+            "line": 350,
             "description": "This method returns the text colour of the node.",
             "itemtype": "method",
             "name": "getTextFillColor",
@@ -1953,8 +2652,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\NodeView.js",
-            "line": 283,
+            "file": "modules\\bgplay\\NodeView.js",
+            "line": 371,
             "description": "This method returns the label of the node.",
             "itemtype": "method",
             "name": "getLabel",
@@ -1966,8 +2665,87 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 16,
+            "file": "modules\\bgplay\\NodeView.js",
+            "line": 380,
+            "description": "This method highlights the node.",
+            "itemtype": "method",
+            "name": "highlight",
+            "params": [
+                {
+                    "name": "if",
+                    "description": "true the node will be highlighted",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "NodeView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\OptionAnimationSpeedView.js",
+            "line": 38,
+            "description": "This method draws this module (eg. inject the DOM and elements).",
+            "itemtype": "method",
+            "name": "render",
+            "class": "OptionAnimationSpeedView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\OptionPopupView.js",
+            "line": 38,
+            "description": "This method draws this module (eg. inject the DOM and elements).",
+            "itemtype": "method",
+            "name": "render",
+            "class": "OptionPopupView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\OptionPopupView.js",
+            "line": 54,
+            "description": "This method manages the events of the built DOM.",
+            "itemtype": "method",
+            "name": "eventManager",
+            "class": "OptionPopupView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\OptionRestoreGraph.js",
+            "line": 41,
+            "description": "This method draws this module (eg. inject the DOM and elements).",
+            "itemtype": "method",
+            "name": "render",
+            "class": "OptionAnimationSpeedView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\OptionRestoreGraph.js",
+            "line": 51,
+            "description": "This method manages the events of the built DOM.",
+            "itemtype": "method",
+            "name": "eventManager",
+            "class": "OptionAnimationSpeedView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\OptionRestoreGraph.js",
+            "line": 62,
+            "description": "This methods builds a string describing the graph.",
+            "itemtype": "method",
+            "name": "getNodesPositions",
+            "class": "OptionAnimationSpeedView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\OptionRestoreGraph.js",
+            "line": 75,
+            "description": "This methods applies to each node the coordinates obtained with the getNodesPositions method.",
+            "itemtype": "method",
+            "name": "apply",
+            "class": "OptionAnimationSpeedView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 15,
             "description": "The initialization method of this object.",
             "itemtype": "method",
             "name": "initialize",
@@ -1982,8 +2760,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 157,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 218,
             "description": "This method manages the animation of a path involved in an event.",
             "itemtype": "method",
             "name": "updatePath",
@@ -1998,8 +2776,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 188,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 258,
             "description": "This method updates the SVG representing the path without animating it.",
             "itemtype": "method",
             "name": "updateWithoutAnimation",
@@ -2007,8 +2785,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 196,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 266,
             "description": "This method updates the visibility of the SVG representing the path.",
             "itemtype": "method",
             "name": "setVisibility",
@@ -2016,8 +2794,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 208,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 278,
             "description": "This method executes the first draw of the SVG representing the path.",
             "itemtype": "method",
             "name": "firstDraw",
@@ -2025,8 +2803,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 231,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 333,
             "description": "This method manages the SVG events.",
             "itemtype": "method",
             "name": "svgEventManager",
@@ -2034,8 +2812,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 248,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 370,
             "description": "This method computes the SVG representing a dynamic path.",
             "itemtype": "method",
             "name": "computeDynamicPathString",
@@ -2054,8 +2832,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 271,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 393,
             "description": "This method computes the SVG representing a path.",
             "itemtype": "method",
             "name": "computeNormalPathString",
@@ -2074,8 +2852,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 287,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 409,
             "description": "This method dispatches a computation of an SVG path to a more specific method.",
             "itemtype": "method",
             "name": "computePathString",
@@ -2094,8 +2872,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 305,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 427,
             "description": "This method computes the SVG representing a static path.",
             "itemtype": "method",
             "name": "computeStaticPathString",
@@ -2104,6 +2882,11 @@
                     "name": "An",
                     "description": "array of nodes",
                     "type": "Array"
+                },
+                {
+                    "name": "An",
+                    "description": "optional boolean to force the path to be the first of the beam",
+                    "type": "Boolean"
                 }
             ],
             "return": {
@@ -2114,8 +2897,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 331,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 461,
             "description": "This method returns a set of ordered arcs that must be drawn between a nodes pair.",
             "itemtype": "method",
             "name": "getDrawnArcs",
@@ -2139,8 +2922,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 356,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 486,
             "description": "This method assigns to each arcs a deviation in order to avoid overlap between arcs belonging to different paths.",
             "itemtype": "method",
             "name": "getArcDeviationPathString",
@@ -2174,8 +2957,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 403,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 533,
             "description": "Provided two paths, this method pushes fake points in order to return equidimensional paths.",
             "itemtype": "method",
             "name": "addFakePoints",
@@ -2199,8 +2982,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 427,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 557,
             "description": "This method animates a path when it is going to be removed.\nThe SVG path blinks and disappears",
             "itemtype": "method",
             "name": "animateRemove",
@@ -2208,8 +2991,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 459,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 589,
             "description": "This method animates a path when it is going to be involved in a minor change.\nThe SVG path blinks.",
             "itemtype": "method",
             "name": "animateMinorChanges",
@@ -2217,8 +3000,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 489,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 619,
             "description": "This method animates a path that was just drawn.",
             "itemtype": "method",
             "name": "animateNewPath",
@@ -2226,8 +3009,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 521,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 651,
             "description": "This method animates a path when it is going to be involved in a change of its route.",
             "itemtype": "method",
             "name": "animatePathChange",
@@ -2235,8 +3018,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\PathView.js",
-            "line": 547,
+            "file": "modules\\bgplay\\PathView.js",
+            "line": 677,
             "description": "This method provides percentages about the stability of the source-target pair in terms of sets of nodes involved.",
             "itemtype": "method",
             "name": "getStatistics",
@@ -2244,33 +3027,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\ScreenShotView.js",
-            "line": 22,
-            "description": "The initialization method of this object.",
-            "itemtype": "method",
-            "name": "initialize",
-            "params": [
-                {
-                    "name": "A",
-                    "description": "map of parameters",
-                    "type": "Map"
-                }
-            ],
-            "class": "ScreenShotView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\ScreenShotView.js",
-            "line": 49,
-            "description": "This method opens in a new tab an SVG file containing the graph",
-            "itemtype": "method",
-            "name": "screenshot",
-            "class": "ScreenShotView",
-            "module": "modules"
-        },
-        {
-            "file": "view\\TimelineView.js",
-            "line": 25,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 24,
             "description": "The initialization method of this object.",
             "itemtype": "method",
             "name": "initialize",
@@ -2285,8 +3043,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 116,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 134,
             "description": "This method draws this module (eg. inject the DOM and elements).",
             "itemtype": "method",
             "name": "render",
@@ -2294,8 +3052,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 170,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 188,
             "description": "This method returns the next event in the timeline.",
             "itemtype": "method",
             "name": "nextEvent",
@@ -2319,8 +3077,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 202,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 220,
             "description": "This method manages the animation of the time cursor along the timeline.",
             "itemtype": "method",
             "name": "seek",
@@ -2340,8 +3098,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 272,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 290,
             "description": "This method is useful to calculate the duration for a seek operation with a logarithm approach.",
             "itemtype": "method",
             "name": "logarithmicSeekTime",
@@ -2360,8 +3118,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 294,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 312,
             "description": "This method starts the animation of the timeline.\nThe animation of the timeline is a set of consecutive seek invocation.",
             "itemtype": "method",
             "name": "animate",
@@ -2369,8 +3127,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 323,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 341,
             "description": "This method returns the number of events occurring between two unix timestamps.",
             "itemtype": "method",
             "name": "getNumberOfEventsBetween",
@@ -2394,8 +3152,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 335,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 353,
             "description": "This method prints information about the timeline.",
             "itemtype": "method",
             "name": "writeTimelineInfo",
@@ -2410,8 +3168,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 351,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 369,
             "description": "This method prints information about the position of the time cursor.",
             "itemtype": "method",
             "name": "writeTimelineDate",
@@ -2419,8 +3177,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 366,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 384,
             "description": "This method draws the Control Timeline",
             "itemtype": "method",
             "name": "drawControlChart",
@@ -2428,8 +3186,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 460,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 478,
             "description": "This method draws the Selection Timeline",
             "itemtype": "method",
             "name": "drawSelectionChart",
@@ -2437,8 +3195,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 635,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 659,
             "description": "This method draws the next page of the Selection Timeline",
             "itemtype": "method",
             "name": "nextSelectionChart",
@@ -2446,8 +3204,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 646,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 670,
             "description": "This method draws the previous page of the Selection Timeline",
             "itemtype": "method",
             "name": "prevSelectionChart",
@@ -2455,8 +3213,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 657,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 681,
             "description": "This method creates an array of events each of which is the first of the related page.",
             "itemtype": "method",
             "name": "selectionChartPages",
@@ -2468,8 +3226,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 682,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 706,
             "description": "This method manages the arrows useful to change the page of the Selection Timeline.",
             "itemtype": "method",
             "name": "manageSelectionChartArrows",
@@ -2477,8 +3235,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 701,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 725,
             "description": "This method updates the representation of the Control Timeline",
             "itemtype": "method",
             "name": "updateControlCanvas",
@@ -2486,8 +3244,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 739,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 763,
             "description": "This method updates the representation of the Selection Timeline",
             "itemtype": "method",
             "name": "updateSelectionCanvas",
@@ -2495,8 +3253,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 778,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 799,
             "description": "This method returns the page of the given event.",
             "itemtype": "method",
             "name": "calculateSelectionChartPage",
@@ -2515,8 +3273,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 793,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 814,
             "description": "This method auto-scrolls the Selection Canvas when the selected instant is represented close to a margin.",
             "itemtype": "method",
             "name": "scrollSelectionCanvas",
@@ -2531,8 +3289,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 854,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 875,
             "description": "This method is triggered when a user changes the selection on the Control Timeline.",
             "itemtype": "method",
             "name": "confirmSlidersSelection",
@@ -2540,8 +3298,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 894,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 915,
             "description": "This method provides a color for each type of event.",
             "itemtype": "method",
             "name": "getEventColor",
@@ -2556,8 +3314,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 932,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 953,
             "description": "This method provides a description for each type of event.",
             "itemtype": "method",
             "name": "getEventVerboseType",
@@ -2572,8 +3330,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 970,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 991,
             "description": "This method is triggered when a user clicks on the Control Timeline in order to change the current instant",
             "itemtype": "method",
             "name": "updateCursorPosition",
@@ -2581,8 +3339,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 990,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 1011,
             "description": "This method is triggered when a user clicks on the Selection Timeline in order to change the current event",
             "itemtype": "method",
             "name": "updateSelectedEvent",
@@ -2590,8 +3348,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 1014,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 1035,
             "description": "This method stops a seek process",
             "itemtype": "method",
             "name": "stopAnimation",
@@ -2599,8 +3357,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 1026,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 1047,
             "description": "This method checks and prevents inconsistent selection of the Control Timeline.",
             "itemtype": "method",
             "name": "checkSliderSelection",
@@ -2608,8 +3366,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 1076,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 1097,
             "description": "This method draws on the Selection Timeline an interval selected on the Control Timeline",
             "itemtype": "method",
             "name": "drawIntervalOnSelectionCanvas",
@@ -2617,8 +3375,8 @@
             "module": "modules"
         },
         {
-            "file": "view\\TimelineView.js",
-            "line": 1180,
+            "file": "modules\\bgplay\\TimelineView.js",
+            "line": 1209,
             "description": "This method manages the mini arrows.\nThe mini arrows are the two green arrows that appear when the timeline sliders (selectors) disappear from the visible selection timeline.",
             "itemtype": "method",
             "name": "miniArrowsManager",
@@ -2626,35 +3384,663 @@
             "module": "modules"
         },
         {
-            "file": "widget\\js\\widget_api_class.js",
-            "line": 204,
-            "description": "Returns the url used to connect to the data API.\n\nXSS safe",
+            "file": "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js",
+            "line": 29,
+            "description": "The initialization method of this object.",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "map of parameters",
+                    "type": "Map"
+                }
+            ],
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js",
+            "line": 91,
+            "description": "This method draws this module (eg. inject the DOM and elements).",
+            "itemtype": "method",
+            "name": "render",
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js",
+            "line": 139,
+            "description": "This method updates the DOM of the Control Panel without render it again.",
+            "itemtype": "method",
+            "name": "update",
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js",
+            "line": 166,
+            "description": "If this method is invoked during an animation then the animation pauses otherwise the animation starts.",
+            "itemtype": "method",
+            "name": "toggle",
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js",
+            "line": 183,
+            "description": "This method validates an IP/prefix inserted in the query form.",
+            "itemtype": "method",
+            "name": "validateIp",
+            "return": {
+                "description": "True if the given IP is valid",
+                "type": "Boolean"
+            },
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js",
+            "line": 202,
+            "description": "This method validates the query form.",
+            "itemtype": "method",
+            "name": "validateAll",
+            "return": {
+                "description": "True if the data inserted in the query form is valid",
+                "type": "Boolean"
+            },
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js",
+            "line": 215,
+            "description": "This method validates the time interval.",
+            "itemtype": "method",
+            "name": "validateInterval",
+            "return": {
+                "description": "True if the time interval is valid",
+                "type": "Boolean"
+            },
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js",
+            "line": 228,
+            "description": "This method validates a set of route collectors",
+            "itemtype": "method",
+            "name": "validateRrcs",
+            "return": {
+                "description": "True if the set of RRCs is valid",
+                "type": "Boolean"
+            },
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js",
+            "line": 306,
+            "description": "This method discards the new query parameters",
+            "itemtype": "method",
+            "name": "discardConfig",
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerQuerySimpleViewRipestat.js",
+            "line": 315,
+            "description": "This method applies the new query parameters",
+            "itemtype": "method",
+            "name": "updateConfig",
+            "class": "ControllerQuerySimpleView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 36,
+            "description": "The initialization method of this object.",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "map of parameters",
+                    "type": "Map"
+                }
+            ],
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 170,
+            "description": "This method draws this module (eg. inject the DOM and elements).",
+            "itemtype": "method",
+            "name": "render",
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 212,
+            "description": "This method updates the DOM of the Control Panel without render it again.",
+            "itemtype": "method",
+            "name": "update",
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 243,
+            "description": "If this method is invoked during an animation then the animation pauses otherwise the animation starts.",
+            "itemtype": "method",
+            "name": "toggle",
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 260,
+            "description": "This method reloads the animation.",
+            "itemtype": "method",
+            "name": "reload",
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 269,
+            "description": "This method repeats the last one event.",
+            "itemtype": "method",
+            "name": "repeat",
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 283,
+            "description": "This method stops and reloads the animation.",
+            "itemtype": "method",
+            "name": "stopButton",
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 292,
+            "description": "This method stops the animation.",
+            "itemtype": "method",
+            "name": "stop",
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 302,
+            "description": "This method applies the previous event.",
+            "itemtype": "method",
+            "name": "previousEvent",
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 320,
+            "description": "This method applies the next event.",
+            "itemtype": "method",
+            "name": "nextEvent",
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 336,
+            "description": "This method validates an IP/prefix inserted in the query form.",
+            "itemtype": "method",
+            "name": "validateIp",
+            "return": {
+                "description": "True if the given IP is valid",
+                "type": "Boolean"
+            },
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 355,
+            "description": "This method validates the query form.",
+            "itemtype": "method",
+            "name": "validateAll",
+            "return": {
+                "description": "True if the data inserted in the query form is valid",
+                "type": "Boolean"
+            },
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 368,
+            "description": "This method validates the time interval.",
+            "itemtype": "method",
+            "name": "validateInterval",
+            "return": {
+                "description": "True if the time interval is valid",
+                "type": "Boolean"
+            },
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 381,
+            "description": "This method validates a set of route collectors",
+            "itemtype": "method",
+            "name": "validateRrcs",
+            "return": {
+                "description": "True if the set of RRCs is valid",
+                "type": "Boolean"
+            },
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 459,
+            "description": "This method discards the new query parameters",
+            "itemtype": "method",
+            "name": "discardConfig",
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\ControllerViewRipestat.js",
+            "line": 468,
+            "description": "This method applies the new query parameters",
+            "itemtype": "method",
+            "name": "updateConfig",
+            "class": "ControllerView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\NodePositionViewRipestat.js",
+            "line": 19,
+            "description": "The initialization method of this object.",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "map of parameters",
+                    "type": "Map"
+                }
+            ],
+            "class": "NodePositionView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\NodePositionViewRipestat.js",
+            "line": 56,
+            "description": "This method draws this module (eg. inject the DOM and elements).",
+            "itemtype": "method",
+            "name": "render",
+            "class": "NodePositionView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\NodePositionViewRipestat.js",
+            "line": 80,
+            "description": "This method manages the events of the built DOM.",
+            "itemtype": "method",
+            "name": "eventManager",
+            "class": "NodePositionView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\NodePositionViewRipestat.js",
+            "line": 105,
+            "description": "This methods builds a string describing the graph.",
+            "itemtype": "method",
+            "name": "getNodesPositions",
+            "class": "NodePositionView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\NodePositionViewRipestat.js",
+            "line": 119,
+            "description": "This methods applies to each node the coordinates obtained with the getNodesPositions method.",
+            "itemtype": "method",
+            "name": "apply",
+            "class": "NodePositionView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\NodePositionViewRipestat.js",
+            "line": 142,
+            "description": "This method opens in a new tab an SVG file containing the graph",
+            "itemtype": "method",
+            "name": "screenshot",
+            "class": "NodePositionView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\OptionPopupViewRipestat.js",
+            "line": 38,
+            "description": "This method draws this module (eg. inject the DOM and elements).",
+            "itemtype": "method",
+            "name": "render",
+            "class": "OptionPopupView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\bgplay_ripestat\\OptionPopupViewRipestat.js",
+            "line": 54,
+            "description": "This method manages the events of the built DOM.",
+            "itemtype": "method",
+            "name": "eventManager",
+            "class": "OptionPopupView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\MainView.js",
+            "line": 18,
+            "description": "The initialization method of this object.",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "map of parameters",
+                    "type": "Map"
+                }
+            ],
+            "class": "MainView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\MainView.js",
+            "line": 53,
+            "description": "This method draws this module (eg. inject the DOM and elements).",
+            "itemtype": "method",
+            "name": "render",
+            "class": "MainView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\MainView.js",
+            "line": 63,
+            "description": "This method alters the layout at run-time. It should be used only when absolutely necessary preferring instead a static CSS+HTML+Mustaches.js layout.",
+            "itemtype": "method",
+            "name": "layoutManager",
+            "class": "MainView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\MainView.js",
+            "line": 91,
+            "description": "This method initializes all the modules declared in the modules.js file.\nIn this environment a module is a View-Controller object:\n- each module is responsible for its representation;\n- each module is combined with a DOM element of the MainView's template;\n- each DOM element has an ID with prefix 'bgplay' to avoid ambiguities with the background html.",
+            "itemtype": "method",
+            "name": "loadViews",
+            "class": "MainView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\MainView.js",
+            "line": 122,
+            "description": "This returns true if all modules are loaded",
+            "itemtype": "method",
+            "name": "areAllModulesLoaded",
+            "return": {
+                "description": "True if all modules are loaded",
+                "type": "Boolean"
+            },
+            "class": "MainView",
+            "module": "modules"
+        },
+        {
+            "file": "modules\\MainView.js",
+            "line": 131,
+            "description": "This method executes a set of functions when all the modules have been loaded.",
+            "itemtype": "method",
+            "name": "allModulesLoaded",
+            "class": "MainView",
+            "module": "modules"
+        },
+        {
+            "file": "utils\\graph.js",
+            "line": 13,
+            "description": "Returns the distance between two points.",
+            "itemtype": "method",
+            "name": "pointDistance",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "and y of the first point",
+                    "type": "Number,Number"
+                },
+                {
+                    "name": "x",
+                    "description": "and y of the second point",
+                    "type": "Number,Number"
+                }
+            ],
+            "return": {
+                "description": "the distance between the two points",
+                "type": "Number"
+            },
             "class": "",
             "module": "modules"
         },
         {
-            "file": "widget\\js\\widget_api_class.js",
-            "line": 329,
-            "description": "Creates and adds the title to the widget.",
-            "class": "",
-            "module": "modules"
-        },
-        {
-            "file": "widget\\widget_api_class.js",
-            "line": 204,
-            "description": "Returns the url used to connect to the data API.\n\nXSS safe",
-            "class": "",
-            "module": "modules"
-        },
-        {
-            "file": "widget\\widget_api_class.js",
-            "line": 329,
-            "description": "Creates and adds the title to the widget.",
+            "file": "widget\\bgplayjs-main-widget.js",
+            "line": 10,
+            "description": "This script initializes the widget environmnet and a particular loader for an instance",
             "class": "",
             "module": "modules"
         }
     ],
     "warnings": [
+        {
+            "message": "Missing item type\nThis method converts input parameters.",
+            "line": " connectors\\JsonWrapGeneric.js:76"
+        },
+        {
+            "message": "Missing item type\nThis method converts input parameters.",
+            "line": " connectors\\JsonWrapGeneric.js:113"
+        },
+        {
+            "message": "Missing item type\nThis method returns the URL where the json file related to the provided parameters is placed.",
+            "line": " connectors\\JsonWrapGeneric.js:138"
+        },
+        {
+            "message": "Missing item type\nThis method populates Bgplay instantiating all the object of the model layer.",
+            "line": " connectors\\JsonWrapGeneric.js:156"
+        },
+        {
+            "message": "Missing item type\nThis method converts input parameters.",
+            "line": " connectors\\JsonWrapRipestat.js:26"
+        },
+        {
+            "message": "Missing item type\nThis method converts input parameters.",
+            "line": " connectors\\JsonWrapRipestat.js:55"
+        },
+        {
+            "message": "Missing item type\nThis method returns the URL where the json file related to the provided parameters is placed.",
+            "line": " connectors\\JsonWrapRipestat.js:80"
+        },
+        {
+            "message": "Missing item type\nThis method populates Bgplay instantiating all the object of the model layer.",
+            "line": " connectors\\JsonWrapRipestat.js:93"
+        },
+        {
+            "message": "Missing item type\nThis method converts input parameters.",
+            "line": " connectors\\JsonWrapTraceroutes.js:114"
+        },
+        {
+            "message": "Missing item type\nThis method converts input parameters.",
+            "line": " connectors\\JsonWrapTraceroutes.js:154"
+        },
+        {
+            "message": "Missing item type\nThis method returns the URL where the json file related to the provided parameters is placed.",
+            "line": " connectors\\JsonWrapTraceroutes.js:167"
+        },
+        {
+            "message": "Missing item type\nThis method populates Bgplay instantiating all the object of the model layer.",
+            "line": " connectors\\JsonWrapTraceroutes.js:201"
+        },
+        {
+            "message": "Missing item type\nIntersection.js\ncopyright 2002, Kevin Lindsey",
+            "line": " lib\\Intersection.js:1"
+        },
+        {
+            "message": "Missing item type\nconstructor",
+            "line": " lib\\Intersection.js:9"
+        },
+        {
+            "message": "Missing item type\ninit",
+            "line": " lib\\Intersection.js:21"
+        },
+        {
+            "message": "Missing item type\nappendPoint",
+            "line": " lib\\Intersection.js:32"
+        },
+        {
+            "message": "Missing item type\nappendPoints",
+            "line": " lib\\Intersection.js:42"
+        },
+        {
+            "message": "Missing item type\nclass methods",
+            "line": " lib\\Intersection.js:52"
+        },
+        {
+            "message": "Missing item type\nintersectShapes",
+            "line": " lib\\Intersection.js:58"
+        },
+        {
+            "message": "Missing item type\nintersectPathShape",
+            "line": " lib\\Intersection.js:98"
+        },
+        {
+            "message": "Missing item type\nintersectBezier2Bezier2",
+            "line": " lib\\Intersection.js:108"
+        },
+        {
+            "message": "Missing item type\nintersectBezier2Bezier3",
+            "line": " lib\\Intersection.js:211"
+        },
+        {
+            "message": "Missing item type\nintersectBezier2Circle",
+            "line": " lib\\Intersection.js:335"
+        },
+        {
+            "message": "Missing item type\nintersectBezier2Ellipse",
+            "line": " lib\\Intersection.js:345"
+        },
+        {
+            "message": "Missing item type\nintersectBezier2Line",
+            "line": " lib\\Intersection.js:389"
+        },
+        {
+            "message": "Missing item type\nintersectBezier2Polygon",
+            "line": " lib\\Intersection.js:465"
+        },
+        {
+            "message": "Missing item type\nintersectBezier2Rectangle",
+            "line": " lib\\Intersection.js:488"
+        },
+        {
+            "message": "Missing item type\nintersectBezier3Bezier3",
+            "line": " lib\\Intersection.js:517"
+        },
+        {
+            "message": "Missing item type\nintersectBezier3Circle",
+            "line": " lib\\Intersection.js:826"
+        },
+        {
+            "message": "Missing item type\nintersectBezier3Ellipse",
+            "line": " lib\\Intersection.js:836"
+        },
+        {
+            "message": "Missing item type\nintersectBezier3Line\nMany thanks to Dan Sunday at SoftSurfer.com.  He gave me a very thorough\n   sketch of the algorithm used here.  Without his help, I'm not sure when I\n   would have figured out this intersection problem.",
+            "line": " lib\\Intersection.js:896"
+        },
+        {
+            "message": "Missing item type\nintersectBezier3Polygon",
+            "line": " lib\\Intersection.js:1002"
+        },
+        {
+            "message": "Missing item type\nintersectBezier3Rectangle",
+            "line": " lib\\Intersection.js:1025"
+        },
+        {
+            "message": "Missing item type\nintersectCircleCircle",
+            "line": " lib\\Intersection.js:1054"
+        },
+        {
+            "message": "Missing item type\nintersectCircleEllipse",
+            "line": " lib\\Intersection.js:1099"
+        },
+        {
+            "message": "Missing item type\nintersectCircleLine",
+            "line": " lib\\Intersection.js:1109"
+        },
+        {
+            "message": "Missing item type\nintersectCirclePolygon",
+            "line": " lib\\Intersection.js:1155"
+        },
+        {
+            "message": "Missing item type\nintersectCircleRectangle",
+            "line": " lib\\Intersection.js:1182"
+        },
+        {
+            "message": "Missing item type\nintersectEllipseEllipse\n   \n   This code is based on MgcIntr2DElpElp.cpp written by David Eberly.  His\n   code along with many other excellent examples are avaiable at his site:\n   http://www.magic-software.com\nNOTE: Rotation will need to be added to this function",
+            "line": " lib\\Intersection.js:1214"
+        },
+        {
+            "message": "Missing item type\nintersectEllipseLine\n   \n   NOTE: Rotation will need to be added to this function",
+            "line": " lib\\Intersection.js:1271"
+        },
+        {
+            "message": "Missing item type\nintersectEllipsePolygon",
+            "line": " lib\\Intersection.js:1325"
+        },
+        {
+            "message": "Missing item type\nintersectEllipseRectangle",
+            "line": " lib\\Intersection.js:1349"
+        },
+        {
+            "message": "Missing item type\nintersectLineLine",
+            "line": " lib\\Intersection.js:1379"
+        },
+        {
+            "message": "Missing item type\nintersectLinePolygon",
+            "line": " lib\\Intersection.js:1418"
+        },
+        {
+            "message": "Missing item type\nintersectLineRectangle",
+            "line": " lib\\Intersection.js:1441"
+        },
+        {
+            "message": "Missing item type\nintersectPolygonPolygon",
+            "line": " lib\\Intersection.js:1471"
+        },
+        {
+            "message": "Missing item type\nintersectPolygonRectangle",
+            "line": " lib\\Intersection.js:1496"
+        },
+        {
+            "message": "Missing item type\nintersectRayRay",
+            "line": " lib\\Intersection.js:1526"
+        },
+        {
+            "message": "Missing item type\nintersectRectangleRectangle",
+            "line": " lib\\Intersection.js:1560"
+        },
+        {
+            "message": "Missing item type\nbezout\nThis code is based on MgcIntr2DElpElp.cpp written by David Eberly.  His\n   code along with many other excellent examples are avaiable at his site:\n   http://www.magic-software.com",
+            "line": " lib\\Intersection.js:1590"
+        },
         {
             "message": "Missing item type\nGet the timezone offset as string from a date object (eg '+0530' for UTC+5.5)",
             "line": " lib\\jquery-ui-timepicker-addon.js:1781"
@@ -2677,79 +4063,55 @@
         },
         {
             "message": "Missing item type\nReturns `true` if the tail is empty (end of string).",
-            "line": " lib\\mustaches.js:110"
+            "line": " lib\\mustaches.js:81"
         },
         {
             "message": "Missing item type\nTries to match the given regular expression at the current position.\nReturns the matched text if it can match, the empty string otherwise.",
-            "line": " lib\\mustaches.js:117"
+            "line": " lib\\mustaches.js:88"
         },
         {
             "message": "Missing item type\nSkips all text until the given regular expression can be matched. Returns\nthe skipped string, which is the entire tail if no match can be made.",
-            "line": " lib\\mustaches.js:133"
+            "line": " lib\\mustaches.js:104"
         },
         {
-            "message": "Missing item type\nLow-level function that compiles the given `tokens` into a\nfunction that accepts two arguments: a Context and a\nRenderer. Returns the body of the function as a string if\n`returnBody` is true.",
-            "line": " lib\\mustaches.js:328"
+            "message": "Missing item type\nLow-level function that renders the given `tokens` using the given `writer`\nand `context`. The `template` string is only needed for templates that use\nhigher-order sections to extract the portion of the original template that\nwas contained in that section.",
+            "line": " lib\\mustaches.js:232"
         },
         {
-            "message": "Missing item type\nForms the given linear array of `tokens` into a nested tree structure\nwhere tokens that represent a section have a \"tokens\" array property\nthat contains all tokens that are in that section.",
-            "line": " lib\\mustaches.js:389"
+            "message": "Missing item type\nForms the given array of `tokens` into a nested tree structure where\ntokens that represent a section have two additional items: 1) an array of\nall tokens that appear in that section and 2) the index in the original\ntemplate that represents the end of that section.",
+            "line": " lib\\mustaches.js:300"
         },
         {
             "message": "Missing item type\nCombines the values of consecutive text tokens in the given `tokens` array\nto a single token.",
-            "line": " lib\\mustaches.js:443"
+            "line": " lib\\mustaches.js:334"
         },
         {
             "message": "Missing item type\nBreaks up the given `template` string into a tree of token objects. If\n`tags` is given here it must be an array with two string values: the\nopening and closing tags used in the template (e.g. [\"<%\", \"%>\"]). Of\ncourse, the default is to use mustaches (i.e. Mustache.tags).",
-            "line": " lib\\mustaches.js:462"
+            "line": " lib\\mustaches.js:365"
         },
         {
-            "message": "Missing item type\nClears all cached templates and partials.",
-            "line": " lib\\mustaches.js:569"
+            "message": "Missing item type\nClears all cached templates and partials in the default writer.",
+            "line": " lib\\mustaches.js:483"
         },
         {
-            "message": "Missing item type\nHigh-level API for compiling the given `tokens` down to a reusable\nfunction. If `tokens` is a string it will be parsed using the given `tags`\nbefore it is compiled.",
-            "line": " lib\\mustaches.js:576"
+            "message": "Missing item type\nCompiles the given `template` to a reusable function using the default\nwriter.",
+            "line": " lib\\mustaches.js:490"
         },
         {
-            "message": "Missing item type\nHigh-level API for compiling the `tokens` for the partial with the given\n`name` down to a reusable function. If `tokens` is a string it will be\nparsed using the given `tags` before it is compiled.",
-            "line": " lib\\mustaches.js:585"
+            "message": "Missing item type\nCompiles the partial with the given `name` and `template` to a reusable\nfunction using the default writer.",
+            "line": " lib\\mustaches.js:498"
         },
         {
-            "message": "Missing item type\nHigh-level API for rendering the `template` using the given `view`. The\noptional `partials` object may be given here for convenience, but note that\nit will cause all partials to be re-compiled, thus hurting performance. Of\ncourse, this only matters if you're going to render the same template more\nthan once. If so, it is best to call `compilePartial` before calling this\nfunction and to leave the `partials` argument blank.",
-            "line": " lib\\mustaches.js:594"
+            "message": "Missing item type\nCompiles the given array of tokens (the output of a parse) to a reusable\nfunction using the default writer.",
+            "line": " lib\\mustaches.js:506"
         },
         {
-            "message": "Missing item type\nThis method converts input parameters.",
-            "line": " model\\JsonWrapRipestat.js:18"
+            "message": "Missing item type\nRenders the `template` with the given `view` and `partials` using the\ndefault writer.",
+            "line": " lib\\mustaches.js:514"
         },
         {
-            "message": "Missing item type\nThis method converts input parameters.",
-            "line": " model\\JsonWrapRipestat.js:43"
-        },
-        {
-            "message": "Missing item type\nThis method returns the URL where the json file related to the provided parameters is placed.",
-            "line": " model\\JsonWrapRipestat.js:65"
-        },
-        {
-            "message": "Missing item type\nThis method populates Bgplay instantiating all the object of the model layer.",
-            "line": " model\\JsonWrapRipestat.js:78"
-        },
-        {
-            "message": "Missing item type\nReturns the url used to connect to the data API.\n\nXSS safe",
-            "line": " widget\\js\\widget_api_class.js:204"
-        },
-        {
-            "message": "Missing item type\nCreates and adds the title to the widget.",
-            "line": " widget\\js\\widget_api_class.js:329"
-        },
-        {
-            "message": "Missing item type\nReturns the url used to connect to the data API.\n\nXSS safe",
-            "line": " widget\\widget_api_class.js:204"
-        },
-        {
-            "message": "Missing item type\nCreates and adds the title to the widget.",
-            "line": " widget\\widget_api_class.js:329"
+            "message": "Missing item type\nThis script initializes the widget environmnet and a particular loader for an instance",
+            "line": " widget\\bgplayjs-main-widget.js:10"
         }
     ]
 }

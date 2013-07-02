@@ -72,16 +72,10 @@ var Node=Backbone.Model.extend({
      * @return {String} A string representing this object
      */
     toString:function(){
-        var out="";
-        switch (this.attributes.environment.bgplay.get("type")){
-            default:
-                out=this.get("id")||"";
-                break;
-        }
-        return out;
+        return this.id;
     }
 });
 
-var Nodes=Backbone.Collection.extend({
+var Nodes = Backbone.Collection.extend({
     model:Node
 });

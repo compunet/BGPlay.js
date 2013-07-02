@@ -45,11 +45,13 @@
             
                 <li><a href="..&#x2F;classes/Bgplay.html">Bgplay</a></li>
             
+                <li><a href="..&#x2F;classes/Cluster.html">Cluster</a></li>
+            
+                <li><a href="..&#x2F;classes/ControllerQuerySimpleView.html">ControllerQuerySimpleView</a></li>
+            
                 <li><a href="..&#x2F;classes/ControllerView.html">ControllerView</a></li>
             
                 <li><a href="..&#x2F;classes/Event.html">Event</a></li>
-            
-                <li><a href="..&#x2F;classes/FullScreenView.html">FullScreenView</a></li>
             
                 <li><a href="..&#x2F;classes/GraphView.html">GraphView</a></li>
             
@@ -57,9 +59,13 @@
             
                 <li><a href="..&#x2F;classes/Instant.html">Instant</a></li>
             
+                <li><a href="..&#x2F;classes/JsonWrapGeneric.html">JsonWrapGeneric</a></li>
+            
                 <li><a href="..&#x2F;classes/JsonWrapRipestat.html">JsonWrapRipestat</a></li>
             
-                <li><a href="..&#x2F;classes/LivePermalinkView.html">LivePermalinkView</a></li>
+                <li><a href="..&#x2F;classes/JsonWrapTraceroutes.html">JsonWrapTraceroutes</a></li>
+            
+                <li><a href="..&#x2F;classes/LegendView.html">LegendView</a></li>
             
                 <li><a href="..&#x2F;classes/MainView.html">MainView</a></li>
             
@@ -69,11 +75,13 @@
             
                 <li><a href="..&#x2F;classes/NodeView.html">NodeView</a></li>
             
+                <li><a href="..&#x2F;classes/OptionAnimationSpeedView.html">OptionAnimationSpeedView</a></li>
+            
+                <li><a href="..&#x2F;classes/OptionPopupView.html">OptionPopupView</a></li>
+            
                 <li><a href="..&#x2F;classes/Path.html">Path</a></li>
             
                 <li><a href="..&#x2F;classes/PathView.html">PathView</a></li>
-            
-                <li><a href="..&#x2F;classes/ScreenShotView.html">ScreenShotView</a></li>
             
                 <li><a href="..&#x2F;classes/Source.html">Source</a></li>
             
@@ -129,10 +137,9 @@
 <div class="file">
     <pre class="code prettyprint linenums">
 &#x2F;*
- * BGPlay.js #9660
- * A web-based service for the visualization of the Internet routing
- *
- * Copyright (c) 2012 Roma Tre University and RIPE NCC
+ * BGPlay.js
+ * Copyright (c) 2013 Massimo Candela, Giuseppe Di Battista, Claudio Squarcella, Roma Tre University and RIPE NCC
+ * http:&#x2F;&#x2F;www.bgplayjs.com
  *
  * See the file LICENSE.txt for copying permission.
  *&#x2F;
@@ -170,7 +177,7 @@ net.webrobotics.GraphUtils = function () {
     };
 
     this.cathetus = function (hypotenuse, otherLeg) {
-        return Math.sqrt(Math.pow(hypotenuse, 2) - Math.pow(otherLeg, 2));
+        return Math.sqrt((hypotenuse*hypotenuse) - (otherLeg*otherLeg));
     };
 
     this.inverseVector = function (vector) {
@@ -189,7 +196,6 @@ net.webrobotics.GraphUtils = function () {
         var module = this.vectorModule(vector);
         var x = Math.abs(vector.x);
         var y = Math.abs(vector.y);
-        return Math.acos((y*y) - (x*x) - (module*module)) &#x2F; (-2 * module * x);
     };
 
     this.vectorProjection = function (vector, axis) {
@@ -221,19 +227,15 @@ net.webrobotics.GraphUtils = function () {
     };
 
     this.hook = function (node1, node2, optimalDistance, limit) {
-        var newPoint1, newPoint2, difference, unitVector, halfDifference, distance,force, kSpringFactor;
+        var newPoint1, newPoint2, difference, unitVector, distance,force, kSpringFactor;
 
         kSpringFactor=0.2; &#x2F;&#x2F;0.3
         distance = this.pointDistance(node1, node2);
         difference = distance - (optimalDistance * Math.abs(node1.orbit - node2.orbit));
-        &#x2F;&#x2F;difference = distance - (optimalDistance);
         if (difference != 0) {
             unitVector = this.unitVector(node1, node2);
             difference = (limit != null &amp;&amp; difference &gt; limit) ? limit : difference;
             force=kSpringFactor*difference;
-            &#x2F;&#x2F;halfDifference = difference &#x2F; 2;
-            &#x2F;&#x2F;newPoint1 = this.mulVectorForValue(unitVector, halfDifference);
-            &#x2F;&#x2F;newPoint2 = this.mulVectorForValue(this.inverseVector(unitVector), halfDifference);
             newPoint1 = this.mulVectorForValue(unitVector, force);
             newPoint2 = this.mulVectorForValue(this.inverseVector(unitVector), force);
 
@@ -248,24 +250,26 @@ net.webrobotics.GraphUtils = function () {
         var newPoint1, newPoint2, unitVector, distance, repulsionFactor, force1, force2, factorSum, factorPercentage;
         repulsionFactor = 80;&#x2F;&#x2F;350
         distance = this.pointDistance(node1, node2);
-        &#x2F;&#x2F;distance=(distance==0)?0.1:distance;
         if (distance &gt; maxDistance) return;
 
-        factorSum = factor1 + factor2;
+        factorSum = factor1 + factor2 + 0.00000001;&#x2F;&#x2F;in order to avoid the Infinity error
+
         factorPercentage = (100&#x2F;factorSum);
         factor1 = factorPercentage*factor1;
         factor2 = factorPercentage*factor2;
 
+        distance = distance + 0.000001; &#x2F;&#x2F;in order to avoid the Infinity error
+
         force1 = (repulsionFactor * (1&#x2F;distance))&#x2F;100 * factor2;
         force2 = (repulsionFactor * (1&#x2F;distance))&#x2F;100 * factor1;
 
-        &#x2F;&#x2F;force=repulsionFactor*Math.sqrt(distance);
         force1 = (force1 &gt; limit) ? limit : force1;
         force2 = (force2 &gt; limit) ? limit : force2;
 
         unitVector = this.unitVector(node1, node2);
         newPoint1 = this.mulVectorForValue(this.inverseVector(unitVector), force1);
         newPoint2 = this.mulVectorForValue(unitVector, force2);
+
         node1.vectors.push(newPoint1);
         node2.vectors.push(newPoint2);
     };
@@ -296,30 +300,28 @@ net.webrobotics.GraphUtils = function () {
         return (parseInt(node1.view.graphId) &lt;= parseInt(node2.view.graphId)) ? [node1, node2] : [node2, node1];
     };
 
-    this.edgeNodeRepulsion = function(edge, node, limit, maxDistance,n){
+    this.edgeNodeRepulsion = function(edge, node, limit, maxDistance, n){
         var angolarCoefficient, perpendicolarCoefficient, q1, q2, px, py, tmpPoint, newPoint1, unitVector, distance, repulsionFactor, force;
         if (edge[1].id != node.id &amp;&amp; edge[0].id != node.id){
-            &#x2F;&#x2F;&amp;&amp; Math.min(this.pointDistance(edge[0],node),this.pointDistance(edge[1],node))&lt;maxDistance){
 
             angolarCoefficient =  (edge[1].y - edge[0].y)&#x2F;(edge[1].x - edge[0].x);
-            q1 = edge[1].y - (angolarCoefficient*edge[1].x);
-            perpendicolarCoefficient = -angolarCoefficient;
-            q2 = node.y&#x2F;(node.x*perpendicolarCoefficient);
-            px = (q2-q1)&#x2F;(angolarCoefficient-perpendicolarCoefficient);
-            py = (angolarCoefficient*edge[0].x) + q1;
-            tmpPoint = {x:px,y:py, vectors:[]};
+
+            q1 = edge[1].y - (angolarCoefficient * edge[1].x);
+            perpendicolarCoefficient = -1&#x2F;angolarCoefficient;
+
+            q2 = node.y - (perpendicolarCoefficient * node.x);
+            px = (q2-q1)&#x2F;(angolarCoefficient - perpendicolarCoefficient);
+            py = (perpendicolarCoefficient * px) + q2;
+            tmpPoint = {x:px, y:py, vectors:[]};
+
+            distance = this.pointDistance(tmpPoint, node);
             if (Math.max(edge[0].x, edge[1].x)&gt;= px &amp;&amp; Math.min(edge[0].x, edge[1].x)&lt;= px  &amp;&amp;
                 Math.max(edge[0].y, edge[1].y)&gt;= py &amp;&amp; Math.min(edge[0].y, edge[1].y)&lt;= py &amp;&amp;
-                this.pointDistance(tmpPoint,node) &lt; maxDistance){
-                &#x2F;&#x2F;this.coulomb({x:px,y:py, vectors:[]}, node, 1000, 1, limit, maxDistance);
+                distance &lt; maxDistance){
 
-                repulsionFactor = 20;&#x2F;&#x2F;350
-                distance = this.pointDistance(tmpPoint, node);
-                if (distance &gt; maxDistance) return;
+                repulsionFactor = 80;&#x2F;&#x2F;350
 
-                &#x2F;&#x2F;force = Math.pow(repulsionFactor,(1&#x2F;n));
-                force = repulsionFactor&#x2F;n;
-                &#x2F;&#x2F;force=repulsionFactor*Math.sqrt(distance);
+                force = repulsionFactor*Math.sqrt(n);
                 force = (force &gt; limit) ? limit : force;
 
                 unitVector = this.unitVector(tmpPoint, node);
@@ -341,7 +343,6 @@ net.webrobotics.GraphUtils = function () {
         var middlePoint1 = this.pointAtDistance(curveCoefficient &#x2F; 2, vector1, p2);
         var middlePoint2 = this.pointAtDistance(curveCoefficient &#x2F; 2, vector2, p2);
 
-        var vector3 = this.unitVector(middlePoint2, middlePoint1);
         var centralPoint = this.pointAtDistance(this.pointDistance(middlePoint2, middlePoint1) &#x2F; 2, vector2, middlePoint2);
 
         points.push(borderPoint1);
