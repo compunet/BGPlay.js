@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>connectors\JsonWrapTraceroutes.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/BgpDataChecksView.html">BgpDataChecksView</a></li>
+            
+                <li><a href="..&#x2F;classes/Bgplay.html">Bgplay</a></li>
+            
+                <li><a href="..&#x2F;classes/Cluster.html">Cluster</a></li>
+            
+                <li><a href="..&#x2F;classes/ControllerQuerySimpleView.html">ControllerQuerySimpleView</a></li>
+            
+                <li><a href="..&#x2F;classes/ControllerView.html">ControllerView</a></li>
+            
+                <li><a href="..&#x2F;classes/Event.html">Event</a></li>
+            
+                <li><a href="..&#x2F;classes/GraphView.html">GraphView</a></li>
+            
+                <li><a href="..&#x2F;classes/InfoPanelView.html">InfoPanelView</a></li>
+            
+                <li><a href="..&#x2F;classes/Instant.html">Instant</a></li>
+            
+                <li><a href="..&#x2F;classes/JsonWrapGeneric.html">JsonWrapGeneric</a></li>
+            
+                <li><a href="..&#x2F;classes/JsonWrapRipestat.html">JsonWrapRipestat</a></li>
+            
+                <li><a href="..&#x2F;classes/JsonWrapTraceroutes.html">JsonWrapTraceroutes</a></li>
+            
+                <li><a href="..&#x2F;classes/LegendView.html">LegendView</a></li>
+            
+                <li><a href="..&#x2F;classes/MainView.html">MainView</a></li>
+            
+                <li><a href="..&#x2F;classes/Node.html">Node</a></li>
+            
+                <li><a href="..&#x2F;classes/NodePositionView.html">NodePositionView</a></li>
+            
+                <li><a href="..&#x2F;classes/NodeView.html">NodeView</a></li>
+            
+                <li><a href="..&#x2F;classes/OptionAnimationSpeedView.html">OptionAnimationSpeedView</a></li>
+            
+                <li><a href="..&#x2F;classes/OptionPopupView.html">OptionPopupView</a></li>
+            
+                <li><a href="..&#x2F;classes/Path.html">Path</a></li>
+            
+                <li><a href="..&#x2F;classes/PathView.html">PathView</a></li>
+            
+                <li><a href="..&#x2F;classes/Source.html">Source</a></li>
+            
+                <li><a href="..&#x2F;classes/Target.html">Target</a></li>
+            
+                <li><a href="..&#x2F;classes/TimelineView.html">TimelineView</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/model.html">model</a></li>
+            
+                <li><a href="..&#x2F;modules/modules.html">modules</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: connectors\JsonWrapTraceroutes.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;*
+ * BGPlay.js #9660
+ * A web-based service for the visualization of the Internet routing
+ *
+ * Copyright (c) 2012 Roma Tre University and RIPE NCC
+ *
+ * See the file LICENSE.txt for copying permission.
+ *&#x2F;
+
+&#x2F;**
+ * This class is a wrapper of the inputs.
+ * @class JsonWrapTraceroutes
+ * @module model
+ *&#x2F;
+function JsonWrap(environment){
+    return {
+
+        getRemoteLayoutUrl: function(idLayout, params){
+            var remoteLayout, server, target, probes, expandedClusters, graphType;
+
+            remoteLayout = getUrlParam(&quot;remoteLayout&quot;);
+
+            if (remoteLayout!= &quot;&quot; &amp;&amp; remoteLayout!=null){
+                return remoteLayout;
+            }
+
+            target = params.targets;
+            probes = params.selectedProbes;
+            graphType = (params.radial) ? &quot;radial&quot; : &quot;linear&quot;;
+
+
+            if (idLayout == null){
+                server = &quot;http:&#x2F;&#x2F;nero.dia.uniroma3.it:8080&#x2F;api&#x2F;v0&#x2F;traceroute-history&#x2F;layout&#x2F;javaserver&#x2F;&quot;+ graphType +&quot;&#x2F;create&quot;;
+                return server + &quot;&#x2F;&quot; + target + &quot;&#x2F;&quot; + probes +&quot;&#x2F;&quot; +
+                    &quot;?start=&quot; + params.starttimestamp +
+                    &quot;&amp;end=&quot; + params.endtimestamp+
+                    &quot;&amp;removeProbesWithIncompleteMetadata=true&quot; +
+                    &quot;&amp;clonePrivateAddresses=true&quot; +
+                    &quot;&amp;applyIpToAsHeuristics=true&quot; +
+                    &quot;&amp;addProbeNodes=true&quot; +
+                    &quot;&amp;collapseNullNodeSequencesIntoSingleNodes=true&quot; +
+                    &quot;&amp;addVirtualClusters=true&quot;;
+            }else{
+                expandedClusters = params.expandedClusters;
+
+                server = &quot;http:&#x2F;&#x2F;nero.dia.uniroma3.it:8080&#x2F;api&#x2F;v0&#x2F;traceroute-history&#x2F;layout&#x2F;javaserver&#x2F;&quot;+ graphType +&quot;&#x2F;morph&#x2F;&quot;;
+
+                return server
+                    + idLayout +
+                    &quot;?currently_expanded_clusters=&quot; + expandedClusters;
+            }
+
+        },
+
+        getType: function(){
+            return &quot;traceroutes&quot;;
+        },
+
+        confirm: function(data){
+            return (data.events.length + data.initialState.length &gt; environment.config.safetyMaximumEvents ||
+                data.nodes.length &gt; environment.config.safetyMaximumNodes);
+        },
+
+        _getConversionList: function(){
+            var conversionList = {
+                starttimestamp : &quot;starttime&quot;,
+                endtimestamp : &quot;endtime&quot;,
+                targets : &quot;resource&quot;
+            };
+            return conversionList;
+        },
+
+        _fromExternalToInternal: function(external, internal){
+            var out, conversionList;
+
+            out = internal || {};
+
+            conversionList = this._getConversionList();
+
+            for (var key in conversionList){
+                out[key] = external[conversionList[key]];
+            }
+
+            for (var key in external){
+                if (!out[key]){
+                    out[key] = external[key];
+                }
+            }
+
+            return out;
+        },
+
+        _fromInternalToExternal: function(internal, external){
+            var out, conversionList;
+
+            out = external || {};
+
+
+            conversionList = this._getConversionList();
+
+            for (var key in conversionList){
+                out[conversionList[key]] = internal[key];
+            }
+
+            for (var key in internal){
+                if (!out[conversionList[key]]){
+                    out[key] = internal[key];
+                }
+            }
+
+            return out;
+        },
+
+        &#x2F;**
+         * This method converts input parameters.
+         * @param {Map} A Map of parameters valid outside the environment
+         * @return {Map} A Map of parameters valid inside the environment
+         *&#x2F;
+        getParams:function(data){
+            var out, selectedProbes, n, length, params, internalParams;
+            out = {};
+
+            params = this.externalParams || environment.thisWidget.get_params();
+
+            internalParams = environment.params || {};
+
+            if (!data){
+                out = this._fromExternalToInternal(params, internalParams);
+             }else{
+
+                selectedProbes = [];
+
+                length = data.sources.length;
+                for (n=0; n&lt;length; n++){
+                    selectedProbes.push(data.sources[n].prb_id);
+                }
+
+                out = {
+                    starttimestamp: params.starttime || data.query_starttime,
+                    endtimestamp: params.endtime || data.query_endtime,
+                    targets: params.resource || data.targets[0].msm_id,
+                    showResourceController: params.showResourceController || true,
+                    &#x2F;&#x2F;instant: &quot;0,&quot;+data.query_starttime,
+                    instant: null,
+                    radial: params.radial || false,
+                    selectedProbes: params.selectedProbes || arrayToString(selectedProbes, &quot;,&quot;),
+                    expandedClusters: params.expandedClusters,
+                    type: &quot;traceroutes&quot;
+                };
+            }
+            return out;
+        },
+
+        &#x2F;**
+         * This method converts input parameters.
+         * @param {Map} A Map of parameters valid inside the environment
+         * @return {Map} A Map of parameters valid outside the environment
+         *&#x2F;
+        setParams:function(params){
+            environment.params = params;
+            params = this._fromInternalToExternal(params, {});
+            this.externalParams = params;
+
+            return params;
+        },
+
+        &#x2F;**
+         * This method returns the URL where the json file related to the provided parameters is placed.
+         * @param {String} A string where the data-source is placed
+         * @param {Map} A Map of parameters valid inside the environment
+         * @return {String} An URL
+         *&#x2F;
+        getJsonUrl:function(params){
+            var remoteHistory, url;
+
+            remoteHistory = getUrlParam(&quot;remoteHistory&quot;);
+            if (remoteHistory != &quot;&quot; &amp;&amp; remoteHistory != null){
+                return remoteHistory;
+            }
+
+            var server, target, probes;
+
+            server = &quot;http:&#x2F;&#x2F;nero.dia.uniroma3.it:8080&#x2F;api&#x2F;v0&#x2F;traceroute-history&#x2F;data&quot;;
+            target = params.targets;
+            probes = params.selectedProbes;
+
+            url = server + &quot;&#x2F;&quot; + target + &quot;&#x2F;&quot; + probes +&quot;&#x2F;&quot; +
+                &quot;?start=&quot; + (params.starttimestamp) +
+                &quot;&amp;end=&quot; + (params.endtimestamp)+
+                &quot;&amp;removeProbesWithIncompleteMetadata=true&quot; +
+                &quot;&amp;clonePrivateAddresses=true&quot; +
+                &quot;&amp;applyIpToAsHeuristics=true&quot; +
+                &quot;&amp;addProbeNodes=true&quot; +
+                &quot;&amp;collapseNullNodeSequencesIntoSingleNodes=true&quot; +
+                &quot;&amp;addVirtualClusters=true&quot;;
+
+            log(url);
+            return url;
+        },
+
+        &#x2F;**
+         * This method populates Bgplay instantiating all the object of the model layer.
+         * @param {Object} A json data object
+         *&#x2F;
+        readJson:function(wrap){
+            if (wrap.nodes.length==0){
+                if (environment.thisWidget){
+                    environment.message={text: &quot;No information available for these query parameters.&quot;, type:&quot;info&quot;};
+                    return false;
+                }else{
+                    alert(&#x27;No information available&#x27;);
+                    document.location=environment.config.homeUrl;
+                }
+            }
+
+            printLoadingInformation(environment,&quot;Reconstructing the history.&quot;);
+            environment.bgplay = new Bgplay({
+                cur_instant:new Instant({
+                    id:0,
+                    timestamp:wrap.query_starttime
+                }),
+                starttimestamp:wrap.query_starttime,
+                endtimestamp:wrap.query_endtime,
+                type:&quot;bgp&quot;
+            });
+            var bgplay = environment.bgplay;
+
+
+            function createClusters(wrap){
+                var length, n, clusters, id, holder, cluster, wrapClusters, asNumber, isVirtual, isPrivate;
+                clusters = bgplay.get(&quot;clusters&quot;);
+                wrapClusters = wrap.clusters;
+                length = wrapClusters.length;
+
+                for (n=0; n&lt;length; n++){
+                    cluster = wrapClusters[n];
+
+                    id = cluster.id;
+                    asNumber = cluster.as_number;
+                    holder = cluster.holder;
+                    isVirtual = cluster.is_virtual;
+                    isPrivate = cluster.is_private;
+
+                    if (id != null){
+                        clusters.put(id, new Cluster({id:id, asNumber:asNumber, virtual: isVirtual, private:isPrivate, holder:holder, realCluser:true, environment:environment}));
+                    }
+                }
+            }
+
+
+            function createNodes(wrap){
+                var node, address, id, newNode, length, nodes, idCluster, isPrivate, clusters, isNull, ip, cluster;
+                nodes = wrap.nodes;
+                length = nodes.length;
+
+                for (var n=0; n&lt;length; n++){
+                    node = wrap.nodes[n];
+                    address = node.address;
+                    idCluster = node.cluster_id;
+                    isPrivate = node.is_private;
+                    id = node.id;
+                    isNull = node.is_null || false;
+
+                    newNode = new Node({
+                        id:id,
+                        address: address,
+                        isPrivate: isPrivate,
+                        isNull: isNull,
+                        nodeUrl: &quot;http:&#x2F;&#x2F;whatismyipaddress.com&#x2F;ip&#x2F;&quot;+address,
+                        environment:environment});
+                    bgplay.addNode(newNode);
+
+                    clusters = bgplay.get(&quot;clusters&quot;);
+                    cluster = clusters.get(idCluster);
+                    cluster.addNode(newNode);
+                    newNode.set({cluster: cluster});
+                }
+            }
+
+
+
+            function createSources(wrap){
+                var source, newSource, wrapSources, n, id, idNode, length, sourceNode,idProbe;
+
+                wrapSources = wrap.sources;
+                length = wrapSources.length;
+
+                for (n=0; n&lt;length; n++){
+                    source = wrapSources[n];
+
+                    id = source.id;
+                    idNode = source.node_id;
+                    idProbe = source.prb_id;
+
+                    sourceNode = bgplay.getNode(idNode);
+
+                    newSource = new Source({id:id, label: idProbe, idProbe: idProbe, group:sourceNode, environment:environment});
+                    bgplay.addSource(newSource);
+                    if (sourceNode!=null){
+                        sourceNode.addSource(newSource);
+                    }
+                }
+
+
+            }
+
+
+
+            function createTargets(wrap){
+                var target, idNode, newTarget, wrapTargets, n, id, description, idProbe, length, targetNode;
+
+                wrapTargets = wrap.targets;
+                length = wrapTargets.length;
+
+                for (n=0; n&lt;length; n++){
+                    target = wrapTargets[n];
+
+                    id = target.id;
+                    idProbe = target.msm_id;
+                    description = target.description;
+                    idNode = target.node_id;
+                    targetNode = bgplay.getNode(idNode);
+
+                    newTarget = new Target({
+                        id: id,
+                        description: description,
+                        idProbe: idProbe,
+                        group: targetNode,
+                        environment: environment});
+
+                    bgplay.addTarget(newTarget);
+                    targetNode.addTarget(newTarget);
+                }
+            }
+
+
+
+            function createInitialState(wrap){
+                var path, event, initialstate, source, tmpPath, target, tmpNode;
+                var uniquePAth = [];
+
+                for (var n = 0, length=wrap.initialState.length; n&lt;length; n++){
+                    initialstate = wrap.initialState[n];
+
+                    target = bgplay.getTarget(initialstate.target_id);
+                    source = bgplay.getSource(initialstate.source_id);
+
+                    if (initialstate.path.length==0){
+                        continue;
+                    }
+
+                    path = new Path({
+                        id:n,
+                        announcedPath:initialstate.path.join(&quot; &quot;),
+                        target:target,
+                        source:source,
+                        environment:environment});
+
+                    uniquePAth[source.id+&quot;-&quot;+target.id] = path;
+
+                    tmpPath = initialstate.path;
+
+                    tmpNode = bgplay.getNode(tmpPath[tmpPath.length-1]);
+                    if (tmpNode.get(&quot;targets&quot;).length==0){
+                        continue; &#x2F;&#x2F;Traceroute incompleto
+                    }
+                    &#x2F;&#x2F;tmpNode.addTarget(target); &#x2F;&#x2F;In this way we can check hijacking
+
+                    for (var i=0; i&lt;tmpPath.length; i++){
+                        if (!tmpPath[i-1] || tmpPath[i-1]!=tmpPath[i])
+                            path.addNode(bgplay.getNode(tmpPath[i]));
+                    }
+                    event = new Event({
+                        subType: &quot;initialstate&quot;,
+                        type: &quot;initialstate&quot;,
+                        source: source,
+                        target: target,
+                        path: path,
+                        instant: bgplay.get(&quot;cur_instant&quot;),
+                        environment: environment
+                    });
+
+                    source.addEvent(event);
+                    bgplay.get(&quot;allEvents&quot;).put(bgplay.get(&quot;cur_instant&quot;), event);
+                }
+
+                &#x2F;&#x2F;console.log(uniquePAth);
+                return uniquePAth;
+            }
+
+            function createEvents(uniquePAth,wrap){
+                var event_id = 1;
+                var event, n, length, tmpNode, instant,eventType,currentPath,attributes,shortdescription,source,longdescription,path,target,tmpEvent,prevPath,tmpPath,subType, numNotValidWithdrawal;
+                var ignoreReannouncements = (environment.params.ignoreReannouncements || environment.config.ignoreReannouncementsByDefault);
+                var path_start_id = uniquePAth.length;
+
+                numNotValidWithdrawal = 0;
+
+                length = wrap.events.length;
+                for (n=0; n&lt;length; n++){
+                    event = wrap.events[n];
+                    eventType = event.type;
+                    attributes = event.attrs;
+                    source = bgplay.getSource(attributes.source_id);
+                    target = bgplay.getTarget(attributes.target_id);
+
+                    prevPath = uniquePAth[source.id+&quot;-&quot;+target.id];
+
+                    if (eventType == &#x27;W&#x27; &amp;&amp; prevPath == null){
+                        numNotValidWithdrawal++;
+                        continue;
+                    }
+
+                    if (attributes.path != null &amp;&amp; attributes.path.length == 0){
+                        continue;
+                    }
+
+                    currentPath = (attributes.path)?attributes.path.join(&quot; &quot;):&quot;&quot;;
+                    instant = new Instant({id:event_id, timestamp:event.timestamp, environment:environment});
+                    path = new Path({id:n+path_start_id,announcedPath:currentPath,target:target,source:source, environment:environment});&#x2F;&#x2F;n is a good id (must be integer)
+                    tmpEvent = new Event({source:source,target:target,type:event.type,instant:instant,community:(attributes.community)?attributes.community.join(&quot;,&quot;):null, environment:environment});
+                    tmpPath = attributes.path;
+
+                    if (eventType == &#x27;W&#x27; &amp;&amp; prevPath != null){
+                        shortdescription = &quot;The route &quot; + prevPath.toString() +&quot; has been withdrawn.&quot;;
+                        longdescription = &quot;The route &quot; + prevPath.toString() +&quot; has been withdrawn...more&quot;;
+                        subType = &quot;withdrawal&quot;;
+                        tmpEvent.attributes.path = null;
+                    }else if (eventType == &#x27;A&#x27; || eventType == &#x27;B&#x27;){
+
+                        tmpNode = bgplay.getNode(tmpPath[tmpPath.length-1]);
+                        if (tmpNode.get(&quot;targets&quot;).length==0){
+                            continue; &#x2F;&#x2F;Traceroute incompleto
+                        }
+                        &#x2F;&#x2F;tmpNode.addTarget(target); &#x2F;&#x2F;In this way we can check hijacking
+                        if (!arrayContains(target.get(&quot;nodes&quot;), tmpNode)){
+                            target.addNode(tmpNode);
+                        }
+
+                        for (var i=0; i&lt;tmpPath.length; i++){
+                            if (!tmpPath[i-1] || tmpPath[i-1]!=tmpPath[i])
+                                path.addNode(bgplay.getNode(tmpPath[i]));
+                        }
+
+                        if (prevPath==null){
+                            shortdescription = &quot;The new route &quot;+ path.get(&#x27;announcedPath&#x27;)+&quot; has been announced&quot;;
+                            longdescription = &quot;The new route &quot;+ path.get(&#x27;announcedPath&#x27;)+&quot; has been announced..more&quot;;
+                            subType = &quot;announce&quot;;
+                            tmpEvent.attributes.path = path; &#x2F;&#x2F;The new path
+                        }else{
+                            if (prevPath.toString()==path.toString()){
+                                if (prevPath.get(&#x27;announcedPath&#x27;)==path.get(&#x27;announcedPath&#x27;)){
+                                    if (!ignoreReannouncements){
+                                        shortdescription=&quot;The route &quot;+ prevPath.get(&#x27;announcedPath&#x27;)+&quot; has been announced again&quot;;
+                                        longdescription=&quot;The route &quot;+ prevPath.get(&#x27;announcedPath&#x27;)+&quot; has been announced again..more&quot;;
+                                        subType=&quot;reannounce&quot;;
+                                        tmpEvent.attributes.path=prevPath; &#x2F;&#x2F;The previous path
+                                    }else{
+                                        continue; &#x2F;&#x2F;skip re-announcements
+                                    }
+                                }else{
+                                    shortdescription=&quot;The route &quot;+ prevPath.get(&#x27;announcedPath&#x27;)+&quot; introduced&#x2F;removed prepending &quot;+path.get(&#x27;announcedPath&#x27;);
+                                    longdescription=&quot;The route &quot;+ prevPath.get(&#x27;announcedPath&#x27;)+&quot; introduced&#x2F;removed prepending &quot;+path.get(&#x27;announcedPath&#x27;)+&quot; ..more&quot;;
+                                    subType=&quot;prepending&quot;;
+                                    tmpEvent.attributes.path=path;
+                                }
+                            }else{
+                                shortdescription=&quot;The route &quot;+ prevPath.get(&#x27;announcedPath&#x27;)+&quot; is changed to &quot;+path.get(&#x27;announcedPath&#x27;);
+                                longdescription=&quot;The route &quot;+ prevPath.get(&#x27;announcedPath&#x27;)+&quot; is changed to &quot;+path.get(&#x27;announcedPath&#x27;)+&quot; ..more&quot;;
+                                subType=&quot;pathchange&quot;;
+                                tmpEvent.attributes.path=path;&#x2F;&#x2F;The new path
+                            }
+                        }
+                    }
+                    uniquePAth[source.id+&quot;-&quot;+target.id]=tmpEvent.attributes.path;
+                    tmpEvent.attributes.shortdescription=shortdescription;
+                    tmpEvent.attributes.longdescription=longdescription;
+                    tmpEvent.attributes.prevPath=prevPath;
+                    tmpEvent.attributes.subType=subType;
+                    source.addEvent(tmpEvent);
+                    bgplay.get(&quot;allEvents&quot;).put(instant,tmpEvent);
+                    event_id++;
+                }
+
+                if (numNotValidWithdrawal&gt;0){
+                    if (numNotValidWithdrawal == 1){
+                        environment.cssAlert.alert(&quot;A withdrawal applied to a not existent path&quot;,&quot;warning&quot;,3000);
+                    }else{
+                        environment.cssAlert.alert(numNotValidWithdrawal+&quot; withdrawals applied to a not existent paths&quot;,&quot;warning&quot;,3000);
+                    }
+                }
+            }
+
+            createClusters(wrap);
+            createNodes(wrap);
+            createSources(wrap);
+            createTargets(wrap);
+            createEvents(createInitialState(wrap),wrap);
+
+            bgplay.updateState();
+
+            return true;
+        }
+    }
+}
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>
