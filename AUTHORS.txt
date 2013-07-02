@@ -6,7 +6,7 @@ http://www.dia.uniroma3.it/~candela
 
 Giuseppe Di Battista <gdb@dia.uniroma3.it>
 Roma Tre University
-http://www.dia.uniroma3.it/~gdb
+http://www.dia.uniroma3.it/~compunet/www/view/person.php?id=gdb
 
 Claudio Squarcella <squarcel@dia.uniroma3.it>
 Roma Tre University
