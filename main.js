@@ -153,7 +153,7 @@ var BGPlay = function(domElement){
         run = this.run;
 
         $.getJSON(
-            url,
+            url+"&callback=?",
             {},
             function(json){
                 run.call($this, json.data);
@@ -175,7 +175,7 @@ var BGPlay = function(domElement){
         run = this.run;
 
         $.getJSON(
-            url,
+            url+"&callback=?",
             {},
             function(json){
                 run.call($this, json.data);
