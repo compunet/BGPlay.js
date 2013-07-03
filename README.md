@@ -1,7 +1,7 @@
 BGPlay.js
 =========
 
-Note: In this version of the code an independent widget environment, including a connection layer, was introduced in order do communicate with generic data sources.
+Note: In this version of the code an independent widget environment, including a connection layer, was introduced in order to communicate with generic data sources.
 In this beta version, changing the query in the control panel causes the reloading of the whole page and not only of the widget content. This is a temporary workaround to solve some known issues.
 If you are looking for a stable instance of bgplay.js use the version provided by the RIPE stat project https://stat.ripe.net/widget/bgplay (communicating with the RIS data source).
 
