@@ -14,4 +14,4 @@ Setup:
 
 3. edit `connectors/JsonWrapGeneric.js` to adapt it for the interaction with your JSON data source, in particular set the url of the data source in `getJsonUrl()`;
 
-4. run the html launcher (e.g. `run_bgplay.html`).
+4. run the HTML launcher (e.g. `run_bgplay.html`).
