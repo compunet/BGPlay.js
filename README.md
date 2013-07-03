@@ -8,7 +8,7 @@ If you are looking for a stable instance of bgplay.js use the version provided b
 
 Setup:
 
-1. set `BGPLAY_PROJECT_URL` in `widget/bgplayjs-main-widget.js` to be the home of the project (use "file://" if the installation is not under a web server);
+1. set `BGPLAY_PROJECT_URL` in `widget/bgplayjs-main-widget.js` to be the home of the project (use "file:///" if the installation is not under a web server);
 
 2. inject the widget in an HTML document as described in `run_bgplay.html` (or use directly `run_bgplay.html`);
 
