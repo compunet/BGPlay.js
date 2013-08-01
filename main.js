@@ -113,7 +113,7 @@ var BGPlay = function(domElement){
         cssListenerInterval = 50; //50 ms
         cssListenerTimeout = 10000; // 10 secs
         cssListener = setInterval(function(){
-            if(environment.bgplayDom.css("margin-left") === "-10px" || true){
+            if(environment.bgplayDom.css("margin-left") === "-10px"){
                 clearInterval(cssListener);
 
                 if (environment.jsonWrap.confirm(data)){
