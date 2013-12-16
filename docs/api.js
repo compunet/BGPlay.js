@@ -3,25 +3,21 @@ YUI.add("yuidoc-meta", function(Y) {
     "classes": [
         "BgpDataChecksView",
         "Bgplay",
-        "Cluster",
-        "ControllerQuerySimpleView",
         "ControllerView",
         "Event",
+        "FullScreenView",
         "GraphView",
         "InfoPanelView",
         "Instant",
-        "JsonWrapGeneric",
         "JsonWrapRipestat",
-        "JsonWrapTraceroutes",
-        "LegendView",
+        "LivePermalinkView",
         "MainView",
         "Node",
         "NodePositionView",
         "NodeView",
-        "OptionAnimationSpeedView",
-        "OptionPopupView",
         "Path",
         "PathView",
+        "ScreenShotView",
         "Source",
         "Target",
         "TimelineView"
@@ -34,7 +30,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "model",
             "name": "model",
-            "description": "This class is a wrapper of the inputs."
+            "description": "This is the Facade of the model layer.\nIt manages all the collections of objects of the model layer and all the parameters needed to describe the domain."
         },
         {
             "displayName": "modules",

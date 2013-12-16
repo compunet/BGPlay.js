@@ -45,13 +45,11 @@
             
                 <li><a href="..&#x2F;classes/Bgplay.html">Bgplay</a></li>
             
-                <li><a href="..&#x2F;classes/Cluster.html">Cluster</a></li>
-            
-                <li><a href="..&#x2F;classes/ControllerQuerySimpleView.html">ControllerQuerySimpleView</a></li>
-            
                 <li><a href="..&#x2F;classes/ControllerView.html">ControllerView</a></li>
             
                 <li><a href="..&#x2F;classes/Event.html">Event</a></li>
+            
+                <li><a href="..&#x2F;classes/FullScreenView.html">FullScreenView</a></li>
             
                 <li><a href="..&#x2F;classes/GraphView.html">GraphView</a></li>
             
@@ -59,13 +57,9 @@
             
                 <li><a href="..&#x2F;classes/Instant.html">Instant</a></li>
             
-                <li><a href="..&#x2F;classes/JsonWrapGeneric.html">JsonWrapGeneric</a></li>
-            
                 <li><a href="..&#x2F;classes/JsonWrapRipestat.html">JsonWrapRipestat</a></li>
             
-                <li><a href="..&#x2F;classes/JsonWrapTraceroutes.html">JsonWrapTraceroutes</a></li>
-            
-                <li><a href="..&#x2F;classes/LegendView.html">LegendView</a></li>
+                <li><a href="..&#x2F;classes/LivePermalinkView.html">LivePermalinkView</a></li>
             
                 <li><a href="..&#x2F;classes/MainView.html">MainView</a></li>
             
@@ -75,13 +69,11 @@
             
                 <li><a href="..&#x2F;classes/NodeView.html">NodeView</a></li>
             
-                <li><a href="..&#x2F;classes/OptionAnimationSpeedView.html">OptionAnimationSpeedView</a></li>
-            
-                <li><a href="..&#x2F;classes/OptionPopupView.html">OptionPopupView</a></li>
-            
                 <li><a href="..&#x2F;classes/Path.html">Path</a></li>
             
                 <li><a href="..&#x2F;classes/PathView.html">PathView</a></li>
+            
+                <li><a href="..&#x2F;classes/ScreenShotView.html">ScreenShotView</a></li>
             
                 <li><a href="..&#x2F;classes/Source.html">Source</a></li>
             
@@ -140,7 +132,7 @@
 
     
         <div class="foundat">
-            Defined in: <a href="..&#x2F;files&#x2F;modules_bgplay_BgpDataChecksView.js.html#l9"><code>modules\bgplay\BgpDataChecksView.js:9</code></a>
+            Defined in: <a href="..&#x2F;files&#x2F;view_BgpDataChecksView.js.html#l10"><code>view\BgpDataChecksView.js:10</code></a>
         </div>
     
 
@@ -186,6 +178,13 @@ The objective of this module is to provide a set of auto-start function for chec
                         
                             <li class="index-item method">
                                 <a href="#method_initialize">initialize</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_pointDistance">pointDistance</a>
 
                                 
                                 
@@ -249,7 +248,7 @@ The objective of this module is to provide a set of auto-start function for chec
             
         
         
-        <a href="..&#x2F;files&#x2F;modules_bgplay_BgpDataChecksView.js.html#l17"><code>modules\bgplay\BgpDataChecksView.js:17</code></a>
+        <a href="..&#x2F;files&#x2F;view_BgpDataChecksView.js.html#l18"><code>view\BgpDataChecksView.js:18</code></a>
         
         </p>
 
@@ -288,6 +287,133 @@ The objective of this module is to provide a set of auto-start function for chec
         </div>
     
 
+    
+
+    
+</div>
+
+                
+                    <div id="method_pointDistance" class="method item">
+    <h3 class="name"><code>pointDistance</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>x</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>x</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Number</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                    <p>Provided by the <a href="../modules/model.html">model</a> module.</p>
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="..&#x2F;files&#x2F;utils_graph.js.html#l14"><code>utils\graph.js:14</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns the distance between two points.</p>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">x</code>
+                        <span class="type">Number,Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>and y of the first point</p>
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">x</code>
+                        <span class="type">Number,Number</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>and y of the second point</p>
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Number</span>:
+                    
+                    the distance between the two points
+                
+            </div>
+        </div>
     
 
     

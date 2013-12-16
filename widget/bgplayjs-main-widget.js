@@ -6,12 +6,7 @@
  * See the file LICENSE.txt for copying permission.
  */
 
-
-/**
- * This script initializes the widget environmnet and a particular loader for an instance
- */
-
-BGPLAY_PROJECT_URL = "http://localhost/bgplayjs/src_2/";
+BGPLAY_PROJECT_URL = "http://localhost/";
 
 BGPLAY_WIDGET_URL = BGPLAY_PROJECT_URL + "widget/";
 BGPLAY_MODEL_URL = BGPLAY_PROJECT_URL + "model/";
@@ -21,6 +16,7 @@ BGPLAY_LIB_URL = BGPLAY_PROJECT_URL + "lib/";
 BGPLAY_UTILS_URL = BGPLAY_PROJECT_URL + "utils/";
 
 BGPLAY_TEMPLATES_URL = BGPLAY_MODULES_URL + "html/";
+BGPLAY_TEMPLATES_NOCORS_URL = BGPLAY_MODULES_URL + "html/js_nocors/";
 BGPLAY_STYLESHEETS_URL = BGPLAY_MODULES_URL + "css/";
 
 BGPLAY_IMAGES_URL = BGPLAY_TEMPLATES_URL + "img/";
@@ -48,5 +44,14 @@ function BGPlayWidget(instance, domId, initialParams, queryParams){
     }
     BGPLAY_INSTANCES[instance].push({domId: domId, initialParams: initialParams, queryParams: queryParams});
 
-    document.write('<script data-main="'+ loader +'" src="lib/require.js"></script>');
+    document.write('<script data-main="' + BGPLAY_PROJECT_URL + loader +'" src="' + BGPLAY_PROJECT_URL + 'lib/require.js"></script>');
 }
+
+/*
+//Workaround for not CORS enabled web server
+function addTemplateContent(name, template){
+    window.templateCache = window.templateCache || {};
+    window.templateCache[name] = template;
+}
+
+*/

@@ -27,30 +27,18 @@ var Cluster = Backbone.Model.extend({
 
     /**
      * Adds a node to this cluster.
-     * @method addNode
+     * @method addSource
      * @param {Object} An instance of Node
      */
-    addNode: function(node){
+    addNode:function(node){
         this.get("nodes").put(node.id, node);
     },
 
-    /**
-     * Returns a node given an ID
-     * @method getNode
-     * @param {String} An ID of a node
-     * @return {Object} The node with that ID
-     */
-    getNode: function(id){
+    getNode:function(id){
         return this.get("nodes").get(id);
     },
 
-    /**
-     * Checks if this cluster contains a given node.
-     * @method contains
-     * @param {Object} An instance of Node
-     * @return {Boolean} True if the cluster contains the given node.
-     */
-    contains: function(node){
+    contains:function(node){
         var n, length, nodes;
         nodes = this.get("nodes");
         length = nodes.length;
@@ -69,7 +57,7 @@ var Cluster = Backbone.Model.extend({
      * @param {Map} A map of parameters
      * @return {Array} An array of {String} errors
      */
-    validate: function(attrs){
+    validate:function(attrs){
         var err=new Array();
         if(attrs.id==null)
             err.push("An id is required!");
@@ -88,6 +76,6 @@ var Cluster = Backbone.Model.extend({
     }
 });
 
-var Clusters = Backbone.Collection.extend({
+var Clusters=Backbone.Collection.extend({
     model:Node
 });

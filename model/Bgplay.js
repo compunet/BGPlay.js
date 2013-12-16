@@ -87,7 +87,6 @@ var Bgplay = Backbone.Model.extend({
     addCluster:function(cluster){
         this.get("clusters").put(cluster.id, cluster);
     },
-
     /**
      * Adds a source to the model.
      * @method addSource

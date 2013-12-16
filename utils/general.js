@@ -6,9 +6,9 @@
  * See the file LICENSE.txt for copying permission.
  */
 
-var currentUrl = document.location.search;
-var isMobile;
-var templateCache = {};
+window.currentUrl = document.location.search;
+window.isMobile;
+window.templateCache = window.templateCache || {};
 
 function getAmountOfTime(timestamp){
     var amount = {};
@@ -103,22 +103,23 @@ function needed(name,obj){
 
 //This function uses Mustache.js to parse a template file and returns or directly injects the resulting DOM
 function parseTemplate(environment, template, object, where, method){
-    var templateFile = environment.templateRoot + template;
-    if (where==null)
-        alert("DOM is null: "+template);
+    var templateFile = environment.templateRoot + "js_nocors/" + template +'.js';
+    if (where == null)
+        alert("DOM is null: " + template);
 
-    var tplResult=templateCache[templateFile]; //try in cache
-    if (tplResult==null){
+    var tplResult = window.templateCache[template]; //try in cache
+    if (tplResult == null){
         $.ajax({
             async: false,
             url: templateFile,
             type: 'GET',
             success: function(tpl) {
-                tplResult=tpl;
-                templateCache[templateFile]=tplResult;
+                tplResult = tpl;
+                window.templateCache[template] = tplResult;
             }
         });
     }
+
     if (method=="append"){
         $(where).append(Mustache.to_html(tplResult, object));
     }if (method=="prepend"){
@@ -170,14 +171,14 @@ var isInternetExplorer=function(){
 }
 
 function isMobileBrowser(){
-    if (isMobile==null){
+    if (window.isMobile==null){
         if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-            isMobile = true;
+            window.isMobile = true;
         }else{
-            isMobile = false;
+            window.isMobile = false;
         }
     }
-    return isMobile;
+    return window.isMobile;
 }
 
 function makeUnselectable(node) {
@@ -323,6 +324,74 @@ function setSVGIndex(element, index){
     });
 }
 
-function loadCss(css_url) {
+function loadCss(css_url){
     $("head").append($('<link rel="stylesheet" href="' + css_url + '" type="text/css"/>'));
 }
+
+function isFunction(functionToCheck){
+    var getType = {};
+    return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
+}
+
+
+//Workaround for not CORS enabled web server
+function addTemplateContent(name, template){
+    window.templateCache = window.templateCache || {};
+    window.templateCache[name] = template;
+}
+
+
+navigator.browser = (function(){
+    var userAgent, appName, matched, tem;
+    userAgent = navigator.userAgent;
+    appName = navigator.appName;
+    matched = userAgent.match(/(opera|chrome|safari|firefox|msie|trident|Windows Phone|BlackBerry|Opera Mini|IEMobile|iPhone|iPad|iPod|webOS|Android)\/?\s*([\d\.]+)/i) || [];
+    matched = matched[2]? [matched[1], matched[2]]:[appName, navigator.appVersion, '-?'];
+    if(matched && (tem = userAgent.match(/version\/([\.\d]+)/i)) != null) matched[2] = tem[1];
+    return {name: matched[0], version: matched[1].split('.')};
+})();
+
+
+var checkCompatibility = function(compatibilityList){
+    var detectedBrowser, detectedVersion, matchedEntry, declaredVersionCompatibility, matchedEntryName;
+
+    detectedBrowser = navigator.browser.name.toLowerCase();
+    detectedVersion = navigator.browser.version;
+
+    for (var entry in compatibilityList){
+        matchedEntry = compatibilityList[entry];
+        matchedEntryName = matchedEntry["browserName"].toLowerCase();
+
+        if (matchedEntryName == detectedBrowser){
+
+            declaredVersionCompatibility = matchedEntry["version"].split('.');
+
+            switch(matchedEntry["comparator"]){
+                case "<":
+                    for (var n=0,length=Math.min(declaredVersionCompatibility.length, detectedVersion.length); n<length; n++){
+                        if (parseInt(detectedVersion[n]) < parseInt(declaredVersionCompatibility[n])){
+                            return false;
+                        }
+                    }
+                    break;
+
+                case ">":
+                    for (var n=0,length=Math.min(declaredVersionCompatibility.length, detectedVersion.length); n<length; n++){
+                        if (parseInt(detectedVersion[n]) > parseInt(declaredVersionCompatibility[n])){
+                            return false;
+                        }
+                    }
+                    break;
+
+                case "=":
+                    for (var n=0,length=Math.min(declaredVersionCompatibility.length, detectedVersion.length); n<length; n++){
+                        if (parseInt(detectedVersion[n]) == parseInt(declaredVersionCompatibility[n])){
+                            return false;
+                        }
+                    }
+                    break;
+            }
+        }
+    }
+    return true;
+};

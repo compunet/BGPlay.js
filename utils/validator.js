@@ -39,3 +39,7 @@ function validateAS(str){
     return /^((AS|as|As|aS)?[0-9]{1,10})$/.test(str);
 }
 
+
+function validateProbe(str){
+    return /^([0-9]{1,6})$/.test(str);
+}

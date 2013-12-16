@@ -52,6 +52,7 @@ var BGPlay = function(domElement){
         this.height = initParams.height;
         this.config = initParams.config;
         this.modules = initParams.modules;
+        this.mainView = initParams.mainView;
 
         thisDom = this.dom;
         environment = {};
@@ -92,6 +93,7 @@ var BGPlay = function(domElement){
 
         environment = this.environment;
         environment.params = environment.jsonWrap.getParams(data);
+        mainView = this.mainView;
 
         var startFunction = function(environment){
             if (environment.safeState){
@@ -106,14 +108,14 @@ var BGPlay = function(domElement){
             }else{
                 environment.modes.push('inconsistent');
             }
-            mainView = new MainView({el:environment.bgplayDom, environment:environment});
-            mainView.loadViews();
+
+            (new mainView({el:environment.bgplayDom, environment:environment})).loadViews();
         }
 
         cssListenerInterval = 50; //50 ms
         cssListenerTimeout = 10000; // 10 secs
         cssListener = setInterval(function(){
-            if(environment.bgplayDom.css("margin-left") === "-10px"){
+            if(environment.bgplayDom.css("margin-top") === "-10px"){
                 clearInterval(cssListener);
 
                 if (environment.jsonWrap.confirm(data)){

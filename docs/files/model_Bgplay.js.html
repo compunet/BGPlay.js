@@ -45,13 +45,11 @@
             
                 <li><a href="..&#x2F;classes/Bgplay.html">Bgplay</a></li>
             
-                <li><a href="..&#x2F;classes/Cluster.html">Cluster</a></li>
-            
-                <li><a href="..&#x2F;classes/ControllerQuerySimpleView.html">ControllerQuerySimpleView</a></li>
-            
                 <li><a href="..&#x2F;classes/ControllerView.html">ControllerView</a></li>
             
                 <li><a href="..&#x2F;classes/Event.html">Event</a></li>
+            
+                <li><a href="..&#x2F;classes/FullScreenView.html">FullScreenView</a></li>
             
                 <li><a href="..&#x2F;classes/GraphView.html">GraphView</a></li>
             
@@ -59,13 +57,9 @@
             
                 <li><a href="..&#x2F;classes/Instant.html">Instant</a></li>
             
-                <li><a href="..&#x2F;classes/JsonWrapGeneric.html">JsonWrapGeneric</a></li>
-            
                 <li><a href="..&#x2F;classes/JsonWrapRipestat.html">JsonWrapRipestat</a></li>
             
-                <li><a href="..&#x2F;classes/JsonWrapTraceroutes.html">JsonWrapTraceroutes</a></li>
-            
-                <li><a href="..&#x2F;classes/LegendView.html">LegendView</a></li>
+                <li><a href="..&#x2F;classes/LivePermalinkView.html">LivePermalinkView</a></li>
             
                 <li><a href="..&#x2F;classes/MainView.html">MainView</a></li>
             
@@ -75,13 +69,11 @@
             
                 <li><a href="..&#x2F;classes/NodeView.html">NodeView</a></li>
             
-                <li><a href="..&#x2F;classes/OptionAnimationSpeedView.html">OptionAnimationSpeedView</a></li>
-            
-                <li><a href="..&#x2F;classes/OptionPopupView.html">OptionPopupView</a></li>
-            
                 <li><a href="..&#x2F;classes/Path.html">Path</a></li>
             
                 <li><a href="..&#x2F;classes/PathView.html">PathView</a></li>
+            
+                <li><a href="..&#x2F;classes/ScreenShotView.html">ScreenShotView</a></li>
             
                 <li><a href="..&#x2F;classes/Source.html">Source</a></li>
             
@@ -137,9 +129,10 @@
 <div class="file">
     <pre class="code prettyprint linenums">
 &#x2F;*
- * BGPlay.js
- * Copyright (c) 2013 Massimo Candela, Giuseppe Di Battista, Claudio Squarcella, Roma Tre University and RIPE NCC
- * http:&#x2F;&#x2F;www.bgplayjs.com
+ * BGPlay.js #9660
+ * A web-based service for the visualization of the Internet routing
+ *
+ * Copyright (c) 2012 Roma Tre University and RIPE NCC
  *
  * See the file LICENSE.txt for copying permission.
  *&#x2F;
@@ -151,12 +144,11 @@
  * @module model
  *
  *&#x2F;
-var Bgplay = Backbone.Model.extend({
+var Bgplay=Backbone.Model.extend({
     defaults:function(){
         return {
-            &quot;sources&quot;: new Sources(),
-            &quot;targets&quot;: new Targets(),
-            &quot;clusters&quot;: new net.webrobotics.TreeMap(comparator,{allowDuplicateKeys:false,suppressDuplicateKeyAlerts:true}),
+            &quot;sources&quot;:new Sources(),
+            &quot;targets&quot;:new Targets(),
             &quot;realPrefixes&quot;:[],
             &quot;type&quot;:&quot;bgp&quot;,&#x2F;&#x2F;this is a default value, it must be set with an appropriate value
             &quot;cur_instant&quot;:null,&#x2F;&#x2F;This var is extremely important
@@ -218,15 +210,6 @@ var Bgplay = Backbone.Model.extend({
     },
 
     &#x2F;**
-     * Adds a cluster to the model.
-     * @method addCluster
-     * @param {Object} An instance of Cluster
-     *&#x2F;
-    addCluster:function(cluster){
-        this.get(&quot;clusters&quot;).put(cluster.id, cluster);
-    },
-
-    &#x2F;**
      * Adds a source to the model.
      * @method addSource
      * @param {Object} An instance of Source
@@ -252,16 +235,6 @@ var Bgplay = Backbone.Model.extend({
      *&#x2F;
     getNode:function(id){
         return this.get(&quot;nodes&quot;).get(id);
-    },
-
-    &#x2F;**
-     * Returns a cluster given an ID
-     * @method getCluster
-     * @param {String} An ID of a cluster
-     * @return {Object} The cluster with that ID
-     *&#x2F;
-    getCluster: function(id){
-        return this.get(&quot;clusters&quot;).get(id);
     },
 
     &#x2F;**

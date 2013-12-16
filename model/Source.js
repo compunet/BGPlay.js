@@ -10,7 +10,7 @@
  * @class Source
  * @module model
  */
-var Source=Backbone.Model.extend({
+var Source = Backbone.Model.extend({
     defaults:{
         type:"source"
     },

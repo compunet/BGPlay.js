@@ -10,7 +10,7 @@
  * @class Event
  * @module model
  */
-var Event=Backbone.Model.extend({
+var Event = Backbone.Model.extend({
     /**
      * The validation method of this object.
      * This method is used to check the initialization parameters.

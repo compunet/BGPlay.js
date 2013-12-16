@@ -26,6 +26,7 @@ require.config({
 
         "TreeMap": BGPLAY_LIB_URL + "TreeMap",
         "dateFormat": BGPLAY_LIB_URL + "dateFormat",
+        //"xdomainajax": BGPLAY_LIB_URL + "jquery.xdomainajax",
 
         "compatibilityTricks": BGPLAY_UTILS_URL + "compatibilityTricks",
         "validator": BGPLAY_UTILS_URL + "validator",
@@ -98,6 +99,12 @@ require.config({
                 'MainView'
             ]
         },
+        "xdomainajax":{
+            deps:[
+                'jquery'
+            ],
+            exports: "$"
+        },
         "MainView": {
             deps:[
                 'backbone',
@@ -121,9 +128,9 @@ define([
     "raphael",
     "config",
     "modules",
-    "modules",
-    "main",
     "MainView",
+    "main",
+    "model",
     BGPLAY_CONNECTORS_URL + "JsonWrapGeneric.js",
     "raphael-pan",
     "tinyscrollbar",
@@ -135,7 +142,8 @@ define([
     "validator",
     "general",
     "cssAlert"
-], function($, Backbone, Mustache, raphael, config, model, modules) {
+
+], function($, Backbone, Mustache, raphael, config, modules, MainView) {
 
     debugMode = (getUrlParam("debug")=="true") ? true : false;// false to prevent console logs
 
@@ -182,6 +190,7 @@ define([
         height: initialParams.height,
         config: config,
         modules: modules,
+        mainView: MainView,
         fileRoot: BGPLAY_PROJECT_URL,
         imageRoot: BGPLAY_IMAGES_URL,
         templateRoot: BGPLAY_TEMPLATES_URL

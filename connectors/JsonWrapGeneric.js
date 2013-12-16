@@ -8,7 +8,7 @@
 
 /**
  * This class is a wrapper of the inputs.
- * @class JsonWrapGeneric
+ * @class JsonWrap
  * @module model
  */
 function JsonWrap(environment){
@@ -100,7 +100,7 @@ function JsonWrap(environment){
                         ignoreReannouncements: (params.ignoreReannouncements == null) ? environment.config.ignoreReannouncementsByDefault : (params.ignoreReannouncements == "true"),
                         instant:params.instant,
                         preventNewQueries: params.preventNewQueries,
-                        nodePositions: params.nodePositions,
+                        nodesPosition: params.nodesPosition,
                         type: "bgp"
                     };
                 }else{
@@ -128,7 +128,7 @@ function JsonWrap(environment){
             if (params.ignoreReannouncements!=null)out.ignoreReannouncements=""+(params.ignoreReannouncements==true);
             out.instant=""+params.instant;
             if (params.preventNewQueries!=null)out.preventNewQueries=""+params.preventNewQueries;
-            if (params.nodePositions!=null)out.nodePositions=""+params.nodePositions;
+            if (params.nodesPosition!=null)out.nodesPosition=""+params.nodesPosition;
             out.type="bgp";
 
             environment.thisWidget.set_params(out);

@@ -11,7 +11,7 @@
  * @class Path
  * @module model
  */
-var Path=Backbone.Model.extend({
+var Path = Backbone.Model.extend({
 
     /**
      * The initialization method of this object.

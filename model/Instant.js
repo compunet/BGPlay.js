@@ -14,7 +14,7 @@
  * @class Instant
  * @module model
  */
-var Instant=Backbone.Model.extend({
+var Instant = Backbone.Model.extend({
     getId:function(){
         return this.get("id");
     },

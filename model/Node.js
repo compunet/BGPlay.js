@@ -10,7 +10,7 @@
  * @class Node
  * @module model
  */
-var Node=Backbone.Model.extend({
+var Node = Backbone.Model.extend({
     defaults:{
         type:"node"
     },
