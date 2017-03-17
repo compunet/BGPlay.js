@@ -1,3 +1,5 @@
+This repo is no longer maintained. Please refer to the new one: https://github.com/MaxCam/BGPlay
+
 BGPlay.js
 =========
 
